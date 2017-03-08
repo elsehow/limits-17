@@ -1,4 +1,4 @@
-% Created 2017-03-07 Tue 16:56
+% Created 2017-03-07 Tue 16:58
 % Intended LaTeX compiler: pdflatex
 \documentclass[sigconf]{acmart}
 \usepackage[utf8]{inputenc}
@@ -40,7 +40,7 @@
 \epigraph{I insist on the fact that there is generally no growth but only a luxurious squandering of energy in every form!}{Georges Batailles, \textit{The Accursed Share}}
 
 \section{{\bfseries\sffamily TODO} Introudction}
-\label{sec:org3e71704}
+\label{sec:org216e039}
 
 some large computes, of course, are for the best
 genome, protein folding, etc\ldots{}
@@ -74,7 +74,7 @@ but how to select, how to use restraint?
 
 
 \section{Background}
-\label{sec:org829c1ee}
+\label{sec:orgc504eda}
 
 
 Before discussing Google's large compute in depth,
@@ -89,7 +89,7 @@ Crucially, as we will discuss in \uline{Section 3}, SHA1 is also used in securit
 
 
 \subsection{SHA1 collisions}
-\label{sec:org5d0afd1}
+\label{sec:orgfedc6cd}
 
 The hashes output by SHA-1 are typically 40 digits, regardless of the size of the input data.
 Crucially, hashes \emph{should} relate uniquely to input data: 
@@ -103,7 +103,7 @@ In the case of SSL/TLS, the protocol for encrypted and authenticated communicati
 \uline{Section 3} will return to TLS vulnerability in more detail.
 
 \subsection{SHA1 collisions in theory}
-\label{sec:orgad13282}
+\label{sec:org2fb5feb}
 
 In discussing the safey of particular hash functions, two questions must be asked:
 (1) how long would it take to find a collision by brute force?, and 
@@ -123,7 +123,7 @@ and by the mid 2010s, the developers of most major browsers had announced plans 
 \cite{Mozilla2017,Sleevi2014}.
 
 \section{Performing a Collision}
-\label{sec:orgfdc87d5}
+\label{sec:orgda98255}
 
 The study in question here produced two PDFs with different content, but identical SHA-1 hashes
 \cite{Stevens2017}.
@@ -151,7 +151,7 @@ in practice, rather than simply discussed in theory.
 
 
 \section{Explaining why the compute happened}
-\label{sec:orgffd960a}
+\label{sec:org72cf5b9}
 
 Since a theoretical result already existed showing a SHA1 collision was possible, 
 one might rightly wonder why researchers would go through a great deal of time and effort
@@ -171,7 +171,7 @@ and aimed to change opinions and behavior among specific groups of stakeholders.
 This section focuses in particular on those involved in the ecosystem of SSL certificates: browsers, webmasters, and the certificate authorities (CAs) tasked with generating certificates.
 
 \subsection{Practice versus theory}
-\label{sec:orga5e99af}
+\label{sec:org73ff42d}
 
 Before progressing onto a discussion of this compute on the ecosystem of SSL certificates,
 we must briefly argue for why an argument of academic interest does not sufficiently explain the performance of this compute.
@@ -191,7 +191,7 @@ After all, one would not need to know the cost in practice of such an exercise w
 The following section explains the performance of this collision in the context of SSL certificates, some of which rely on SHA-1 to provide cryptographic guarantees.
 
 \subsection{SHA-1 and SSL Certificates}
-\label{sec:org359f088}
+\label{sec:orgab24957}
 
 Some users of SHA1 did not care much about the demonstrated attack.
 Linus Torvalds, developer of the Git version control software (which relies on SHA1 to refer to files), reported no immediate concern.
@@ -214,7 +214,7 @@ as well as stakeholders for whom a change away from SHA-1 could incur significan
 The following sections examine the impact of this attack on both CAs, and browser developers. 
 
 \subsubsection{Certificate authorities}
-\label{sec:org067640f}
+\label{sec:org6bed1ed}
 
 First, the SHA-1 attack can be mediated entirely by
 by replacing old SHA1 certificates with newer ones using SHA-2 or SHA-3.
@@ -225,7 +225,7 @@ Assuming they were not, one explanation for performing this compute is that doin
 putting some real pressure on them by freely releasing code that could result in forged certificates \cite{Stevens2017github}.
 
 \subsubsection{{\bfseries\sffamily TODO} Browser press}
-\label{sec:orgee592d5}
+\label{sec:org6371ea4}
 
 Alongside the issue of enforcing proper security practices on a decentralized system of certificate authorities, 
 there is a separate ecosystem of browser producers.
@@ -242,7 +242,7 @@ While browser production is also decentralized, it is less so than CAs
 \uline{so, another explanation is that this thing helps their PR by bolstering their decision, making it seem more reasonable or wahtever}.
 
 \subsection{{\bfseries\sffamily TODO} Extravegance}
-\label{sec:orgc7a8d43}
+\label{sec:orgbe34373}
 
 This collision demonstrated not only the considerable resources required to exploit \uline{[]}'s theoretical result,
 but the vast resources that Google must have, if it is able to spend so heavily on a project with essentially polemic aims.
@@ -251,7 +251,7 @@ By Bataille's theory of consumption \uline{[]}, some share of all economic activ
 
 
 \section{The polemics of actually doing}
-\label{sec:org11a0e56}
+\label{sec:orge0fa1f8}
 
 The prior section gave sociotechnical context for the performance of the SHA-1 collision compute,
 giving many explanations across a wide variety of contexts.
@@ -265,7 +265,7 @@ in centering the material nature of performed computation
 in describing its agential power in sociotechnical discourses.
 
 \subsection{Defining polemic computation}
-\label{sec:org0e8d57e}
+\label{sec:org3e02dd8}
 
 This paper defines \emph{polemic computation} 
 as a computation enacted (rather than discussed)
@@ -284,7 +284,7 @@ to other theories of charismatic technology and critical design,
 highlighting the relevant differences between our theories and these. 
 
 \subsection{Charismatic technology}
-\label{sec:org473a61b}
+\label{sec:org9a75340}
 
 Indeed, polemic computation can be said to ``work'' in part 
 because it is animated by ideological frameworks.
@@ -310,7 +310,7 @@ Rather than computing answers, polemic computation uses the material feat of exp
 to work as an agent in technosocial discourse.
 
 \subsection{Critical design}
-\label{sec:org43e041c}
+\label{sec:orge0560f0}
 
 Another strand of research that explicitly centers the agency of technological artifacts
 is critical design \cite{Dunne2001}.
@@ -327,7 +327,7 @@ used its material power \cite{Bennett2013a} along with a touch of humor to enter
 
 
 \section{Ecological Risks, Polemic Rewards}
-\label{sec:org2e0754d}
+\label{sec:org6a4fc13}
 
 The prior section outlined explanations for why the SHA1 compute was performed, 
 and proposed a theory of polemic computation typifying such explanations.
@@ -348,7 +348,7 @@ In general, future work should explore the space of risks and rewards
 associated with polemic computes from a variety of ethical, legal and economic standpoints.
 
 \subsection{Volunteer distributed computing projects}
-\label{sec:orgebf0b32}
+\label{sec:org7e1a3d6}
 
 Some projects have aimed to perform large computations by distributing the work across multiple machines,
 particularly commodity hardware supplied by volunteers.
@@ -374,7 +374,7 @@ The computational work (and associated costs) might be fruitfully examined to ot
 such as protein folding.
 
 \subsection{Web applications as supercomputation}
-\label{sec:org4af80d2}
+\label{sec:orgc81541e}
 
 Web applications share some properties with the volunteer distributed computing applications mentioned above.
 Much computation is offloaded onto commdity clients, such as mobile phone apps or web browsers.
@@ -393,7 +393,7 @@ Such polemic decisions may have real ecological consequences.
 
 
 \subsection{Rise of machine learning}
-\label{sec:org1fe6d5a}
+\label{sec:orgdd53a39}
 
 Some work in machine learning blurs the line 
 between polemic intent and answer-finding.
@@ -415,7 +415,7 @@ of performance in particular competitions, or against particular benchmarks \cit
 
 
 \section{{\bfseries\sffamily TODO} Conclusion}
-\label{sec:org6546072}
+\label{sec:org6f7ca21}
 
 sequencing the genome, as much to excite a field as anything else
 more ambitious with mapping human brain -- what are the results
@@ -429,7 +429,7 @@ computing ever-more digits of pi for example; dubious empirical benefit (at leas
 
 
 \section{Acknowledgements}
-\label{sec:org53db407}
+\label{sec:org16f850d}
 Morgan Aimes, Nick Doty, Anette Greiner, Sebastian Benthall
 
 \bibliographystyle{ACM-Reference-Format}
