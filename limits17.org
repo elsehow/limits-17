@@ -12,7 +12,7 @@
 #+LATEX_HEADER: \acmPrice{15.00}
 #+TITLE: Better Not to Know
 #+Author: 
-#+SUBTITLE: Polemic Computation, and Ecological Costs in the SHA1 Collision Compute
+#+SUBTITLE: Limits of Polemic Computation in the SHA-1 Collision
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style1.css" />
 :end:
 
@@ -172,6 +172,10 @@ the issuance of SSL certificates, some of which rely on SHA-1 to provide cryptog
 
 ** SHA-1 and SSL Certificates
 
+#+ATTR_LATEX: :placement [t!]
+#+caption: TODO Explain how many browsers would have ignored SHA-1s anwyway, even if this compute never happened.
+[[./figures/ca-share.png]]
+
 SHA1 is also used in the issuance of (especially older) SSL certificates.
 (SSL certificates
 provide a token of the authenticity of a user's connection to a webpage,
@@ -200,7 +204,7 @@ putting some real pressure on them by freely releasing code that could result in
 
 _quick conclusory paragraph............._
 
-*** Browser developers
+*** TODO Browser developers
 
 Alongside the issue of enforcing proper security practices on a decentralized system of certificate authorities, 
 a separate ecosystem of browser developers exercises independent authority to accept, or reject, certificates issued by CAs.
@@ -277,7 +281,7 @@ The following sections relate this theory of polemic computations
 to other theories of charismatic technology and critical design,
 highlighting the relevant differences between our theories and these. 
 
-** Charismatic technology
+** TODO Charismatic technology
 
 Indeed, polemic computation can be said to ``work'' in part 
 because it is animated by ideological frameworks.
@@ -374,6 +378,7 @@ such as protein folding.
 # Since computation has the explicit use of constructing or making legible the value of a currency, 
 # it is difficult to evaluate such work as purely polemic.
 # However, th
+
 
 ** Web applications as supercomputation
 
