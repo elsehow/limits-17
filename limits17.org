@@ -279,7 +279,7 @@ as an agent in technosocial debates cite:Ames2015.
 
 The following sections relate this theory of polemic computations
 to other theories of charismatic technology and critical design,
-highlighting the relevant differences between our theories and these. 
+highlighting the relevant differences to our theories.
 
 ** TODO Charismatic technology
 
@@ -416,7 +416,7 @@ we must ask questions about the costs (and motivations) for doing so.
 Future work could raise questions about the polemics involved
 with particular attempts to train deep learning algorithms,
 examining their ecological costs against the sociotechnical goals 
-of performance in particular competitions, or against particular benchmarks cite:SixSilberman2015.
+of performance in particular competitions or benchmarks cite:SixSilberman2015.
 
 
 * Conclusion
