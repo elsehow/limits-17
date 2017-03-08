@@ -20,18 +20,18 @@
 \epigraph{I insist on the fact that there is generally no growth but only a luxurious squandering of energy in every form!}{Georges Batailles, \textit{The Accursed Share}}
 #+END_EXPORT
 
-* TODO Introudction
+* Introudction
 
 From protein folding to the discovery of novel drugs,
 some large computes are for the best
 cite:Anderson2004.
 But what about computing ever-increasing digits of pi?
 What about finding two PDFs with different content, but identical checksums?
-Are such computes worth
+Are such computethis s worth
 the ecological costs, and the opportunity costs, compared to other things one could compute?
 
 This paper reads the SHA1 collision compute (Section 2), and the various sociotechnical entanglements that motivated it to be performed (rather than simply discussed) (Section 3),
-to motivate a throy forwards of /polemic computation/ _(Section 4)_, 
+to motivate a throy forwards of /polemic computation/ (Section 4), 
 computations that, through the feat of the resources expended on them, 
 work primarily to enter into sociotechnical discourses animated with particular narratives and aims.
 
@@ -56,7 +56,7 @@ they take some data, and produce some new data, such that the original data cann
 SHA1 is one cryptographic hash function, designed by the NSA in the early 1990s.
 For some block of any-sized data, SHA1 produces a 40-digit string of characters.
 It is used in most version control applications to refer uniquely to files. SHA1 may also be used to check for corrupted files. 
-Crucially, as we will discuss in _Section 3_, SHA1 is also used in security-oriented protocols such as SSH/TLS.
+Crucially, as we will discuss in Section 3, SHA1 is also used in security-oriented protocols such as SSH/TLS.
 
 
 ** SHA1 collisions
@@ -70,7 +70,7 @@ in which two different input data produce identical hashes.
 Collisions break several common uses of SHA1. 
 (Amusingly, a test that captured Google's collision test broke the version control system for the Webkit browser engine cite:Koivisto2017).
 In the case of SSL/TLS, the protocol for encrypted and authenticated communication on the web, SHA1 collisions have more severe consequences.
-_Section 3_ will return to TLS vulnerability in more detail.
+Section 5 will return to TLS vulnerability in more detail.
 
 ** SHA1 collisions in theory
 
@@ -119,6 +119,10 @@ in practice, rather than simply discussed in theory.
 
 
 * Explaining why the compute happened
+
+#+ATTR_LATEX: :float multicolumn
+#+caption: TODO Explain how many browsers would have ignored SHA-1s anwyway, even if this compute never happened.
+[[./figures/browser-share.png]]
 
 Since a theoretical result already existed showing a SHA1 collision was possible, 
 one might rightly wonder why researchers would go through a great deal of time and effort
