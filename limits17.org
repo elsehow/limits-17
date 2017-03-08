@@ -22,36 +22,27 @@
 
 * TODO Introudction
 
-some large computes, of course, are for the best
-genome, protein folding, etc...
-and this compute was possibly for the best... some SSL certs use SHA1
+From protein folding to the discovery of novel drugs,
+some large computes are for the best
+cite:Anderson2004.
+But what about computing ever-increasing digits of pi?
+What about finding two PDFs with different content, but identical checksums?
+Are such computes worth
+the ecological costs, and the opportunity costs, compared to other things one could compute?
 
-but ....
-my question is whether or not they should perform it, 
-vs ``proving'' the attack in theory,
-given the ecological costs (energy, CO2) and the opportunity costs (what else could they could have computed, e.g. protein folding)?
-why compute at all?
+This paper reads the SHA1 collision compute (Section 2), and the various sociotechnical entanglements that motivated it to be performed (rather than simply discussed) (Section 3),
+to motivate a throy forwards of /polemic computation/ _(Section 4)_, 
+computations that, through the feat of the resources expended on them, 
+work primarily to enter into sociotechnical discourses animated with particular narratives and aims.
 
+In the case of the SHA-1 compute, researchers took on a sizeable monitory and environmental cost
+to enforce a point of view among specific stakeholders in the (social, political) economy of SSL certificates.
+In so doing, the compute's aims are animated by
+larger narratives of authenticity, privacy and security on the internet.
 
-_polemic aims (even important ones) weigh political and social goals against ecological risks_
-_DRILL IN -- POLEMIC AIMS FOR *SPECIFIC* STAKHEOLDERS....._
-_MORE ABOUT WHY THIS IS ABOUT "LIMITS" PER SE_
-
-
-This paper reads the SHA1 collision compute, and the various sociotechnical entanglements that motivated it to be performed (rather than simply discussed) _(Section 2)_,
-to motivate a throy forwards of /polemic computation/ _(Section 3)_, 
-_brief definition_.
-I discuss the weighing of polemic rewards against the ecological risks in _(Section 5)_.
-
-using this example of a MEDIUM sized compute
-highlights BROADER tensions about when to compute and when not to
-especially in the case of EXTREMELY large computes....
-always unclear risk/reward, e.g. with training neural nets
-start to raise questions about what we can we do to hedge our risks - in time and captial, but also in the environment?
-we will only have more things to compute,
-and more things to compute them with,
-but how to select, how to use restraint?
-
+Polemic computes, even important ones, weigh political and social goals against ecological (and other) costs.
+This paper aims to begin questions about how polemic computes can and should work within ecological limits.
+I conclude with how this debate might carry forward in distributed computing, web applications and machine learning (Section 6).
 
 * Background
 
@@ -393,17 +384,18 @@ examining their ecological costs against the sociotechnical goals
 of performance in particular competitions, or against particular benchmarks cite:SixSilberman2015.
 
 
-* TODO Conclusion
+* Conclusion
 
-sequencing the genome, as much to excite a field as anything else
-more ambitious with mapping human brain -- what are the results
-I argue many supercompute projects have this quality
-
-computing ever-more digits of pi for example; dubious empirical benefit (at least for now/until it doesnt; with math especially, one never knows).
-
-_Polemic rewards_
-_Ecological risks
-_Enforcing a balance_
+Using the example of a relatively modest large-scale compute,
+this paper highlights broader tensions about when and when not to compute.
+In the case of polemic computation, the social rewards are always unclear.
+Future work should consider broadly what we can we do to hedge our risks, 
+not just in time and captial,
+but in ecological cost.
+We will only have more things to compute,
+and more things to compute them with,
+but how to select which to expend our increasingly precious resources on, 
+how to use restraint?
 
 
 * Acknowledgements
