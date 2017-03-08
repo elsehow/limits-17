@@ -1,4 +1,4 @@
-% Created 2017-03-08 Wed 09:18
+% Created 2017-03-08 Wed 10:41
 % Intended LaTeX compiler: pdflatex
 \documentclass[sigconf]{acmart}
 \usepackage[utf8]{inputenc}
@@ -40,7 +40,7 @@
 \epigraph{I insist on the fact that there is generally no growth but only a luxurious squandering of energy in every form!}{Georges Batailles, \textit{The Accursed Share}}
 
 \section{Introudction}
-\label{sec:orgf598aab}
+\label{sec:orgbf0ed32}
 
 From protein folding to the discovery of novel drugs,
 some large computes are for the best
@@ -61,10 +61,11 @@ larger narratives of authenticity, privacy and security on the internet.
 
 Polemic computes, even important ones, weigh political and social goals against ecological (and other) costs.
 This paper aims to begin questions about how polemic computes can and should work within ecological limits.
+In other words, I aim to surface questions about the limits of how far computation \emph{should} go to prove our point.
 I conclude with how this debate might carry forward in distributed computing, web applications and machine learning (Section 6).
 
 \section{Background}
-\label{sec:org249fd95}
+\label{sec:orgcfb3be1}
 
 
 Before discussing Google's large compute in depth,
@@ -79,7 +80,7 @@ Crucially, as I will discuss in Section 3, SHA1 is also used in security-oriente
 
 
 \subsection{SHA1 collisions}
-\label{sec:orge28dd50}
+\label{sec:orgd7b902f}
 
 The hashes output by SHA-1 are typically 40 digits, regardless of the size of the input data.
 Crucially, hashes \emph{should} relate uniquely to input data: 
@@ -93,7 +94,7 @@ In the case of SSL/TLS, the protocol for encrypted and authenticated communicati
 Section 5 will return to TLS vulnerability in more detail.
 
 \subsection{SHA1 collisions in theory}
-\label{sec:orgcd4384a}
+\label{sec:org70172ff}
 
 In discussing the safey of particular hash functions, two questions must be asked:
 (1) how long would it take to find a collision by brute force?, and 
@@ -112,8 +113,9 @@ By 2011, a 2\(^{\text{61}}\) calculation attack was discovered \cite{Stevens2013
 and by the mid 2010s, the developers of most major browsers had announced plans to stop accepting SHA-1 SSL certificates 
 \cite{Mozilla2017,Sleevi2014}.
 
+
 \section{Performing a Collision}
-\label{sec:org1b6586c}
+\label{sec:orgb8deeb2}
 
 The study in question here produced two PDFs with different content, but identical SHA-1 hashes
 \cite{Stevens2017}.
@@ -141,7 +143,7 @@ in practice, rather than simply discussed in theory.
 
 
 \section{Explaining why the compute happened}
-\label{sec:orgdda29d8}
+\label{sec:org911d416}
 
 \begin{figure*}
 \centering
@@ -167,7 +169,7 @@ and aimed to change opinions and behavior among specific groups of stakeholders.
 This section focuses in particular on those involved in the ecosystem of SSL certificates: browsers, webmasters, and the certificate authorities (CAs) tasked with generating certificates.
 
 \subsection{Practice versus theory}
-\label{sec:org8f0fef1}
+\label{sec:orga4c40e6}
 
 Before progressing onto a discussion of this compute on the ecosystem of SSL certificates,
 we must briefly argue for why an argument of academic interest does not sufficiently explain the performance of this compute.
@@ -175,23 +177,24 @@ we must briefly argue for why an argument of academic interest does not sufficie
 The computation here ended up being more difficult than theoretical results indicated due to the storage and communication requirements necessary to perform the work across multiple datacenters. 
 The collision compute reveals details relevant
 to knowing how realistic the threat is in practice. 
-
-All cryptography can be broken with sufficient computational time.
-Cybersecurity practice depends on navigating the costs and benefits for adversaries, and their presumed resourcefulness
-This result shows that a powerful attack (such as Google) can indeed break SHA1 with some knowable resources.
-Surely, if Google can perform such an attack, a government actor could do so as well.
-One question raised by the polemics of this compute is, ``do SHA-1 users have assets worth at least as much as the cost of this compute?''
-
-Of course, given that SHA1 has already been widely deprecated, this explanation does not answer why such an academic exercise was considered necessary.
+Of course, given that SHA1 has already been widely deprecated, this explanation does not in itself answer why such an exercise was considered necessary.
 After all, one would not need to know the cost in practice of such an exercise without some reason.
-The following section explains the performance of this collision in the context of SSL certificates, some of which rely on SHA-1 to provide cryptographic guarantees.
 
-\subsection{SHA-1 and SSL Certificates}
-\label{sec:orgdc1d73a}
+Indeed, one reason, aside from the particular answer computed, is that the compute raises a question and challenge to users of SHA-1:
+``Do SHA-1 users have assets worth at least as much as the cost of this compute?''
+All cryptography can be broken with sufficient computational time.
+This result shows that a powerful attack (such as Google) can indeed break SHA1 with some knowable resources.
+And, surely, if Google can perform such an attack, a government actor could do so as well.
 
-Some users of SHA1 did not care much about the demonstrated attack.
+Of course, some users of SHA1 did not care much about the demonstrated attack.
 Linus Torvalds, developer of the Git version control software (which relies on SHA1 to refer to files), reported no immediate concern.
 ``Do we want to migrate to another hash? Yes. Is it 'game over' for SHA1 like people want to say? Probably not.'' \cite{Torvalds2017}.
+The following section explains the performance of this collision in the context of 
+an application in which stakes are potenitally much higher:
+the issuance of SSL certificates, some of which rely on SHA-1 to provide cryptographic guarantees.
+
+\subsection{SHA-1 and SSL Certificates}
+\label{sec:orge63bf8f}
 
 SHA1 is also used in the issuance of (especially older) SSL certificates.
 (SSL certificates
@@ -207,10 +210,10 @@ SSL certificates are issued by Certificate Authorities (CAs), which in theory ab
 regulations set by the CA/Browser Forum, a standards-setting body.
 Here unravels a more complex story of regulation and standards bodies,
 as well as stakeholders for whom a change away from SHA-1 could incur significant monetary costs.
-The following sections examine the impact of this attack on both CAs, and browser developers. 
+The following sections examine the polemic impact of this attack on both CAs, and browser developers. 
 
 \subsubsection{Certificate authorities}
-\label{sec:org6ec9b3e}
+\label{sec:org109f70c}
 
 First, the SHA-1 attack can be mediated entirely by
 by replacing old SHA1 certificates with newer ones using SHA-2 or SHA-3.
@@ -220,8 +223,10 @@ However, Since CAs are decentralized, and since SSL issuees (website administrat
 Assuming they were not, one explanation for performing this compute is that doing so would encourage CAs (and webmasters) to wisen up to the threat posed by SHA-1,
 putting some real pressure on them by freely releasing code that could result in forged certificates \cite{Stevens2017github}.
 
-\subsubsection{Browser press}
-\label{sec:orgd5d90d2}
+\uline{quick conclusory paragraph\ldots{}\ldots{}\ldots{}\ldots{}.}
+
+\subsubsection{Browser developers}
+\label{sec:orgce90532}
 
 Alongside the issue of enforcing proper security practices on a decentralized system of certificate authorities, 
 a separate ecosystem of browser developers exercises independent authority to accept, or reject, certificates issued by CAs.
@@ -244,17 +249,24 @@ given the still-theoretical nature of the hash's vulnerability.
 \uline{it will probably stop such back-and-forth all together, helping ppl focus on other issues\ldots{}\ldots{}this alone could have economic impacts within Google, Mozilla}
 \uline{at a very high level, browsers need their users to feel secure, or people will not use the web as much!!!!!!}
 
-\subsection{{\bfseries\sffamily TODO} Extravegance}
-\label{sec:orgf46e553}
+\subsection{{\bfseries\sffamily TODO} Extravegance, power}
+\label{sec:org38ae442}
 
-This collision demonstrated not only the considerable resources required to exploit \uline{[]}'s theoretical result,
+The SHA-1 collision demonstrated an attack feasible only for highly resourceful actors (for now). 
+Such actors might be a government or, apparently, Google.
+Thus, this collision demonstrated not only the considerable resources required to exploit \uline{[]}'s theoretical result,
 but the vast resources that Google must have, if it is able to spend so heavily on a project with essentially polemic aims.
-Alternatively, the computation had the ulterior polemic aim of demonstrating Google's resources.
-By Bataille's theory of consumption \uline{[]}, some share of all economic activity must be spent without gain \uline{expand quite a bit here\ldots{}..}.
+
+One explanation is that this computation had the ulterior polemic aim of demonstrating Google's vast resources.
+\uline{demonstration of brute strength\ldots{}\ldots{}\ldots{}\ldots{}\ldots{}\ldots{}\ldots{}\ldots{}.and thus power}
+
+\uline{or, alternatively,}
+By Bataille's theory of consumption \uline{[]}, some share of all economic activity must be spent without gain 
+\uline{1 more sentence here, about extravegance\ldots{}..}.
 
 
 \section{The polemics of actually doing}
-\label{sec:org8529204}
+\label{sec:org93057b3}
 
 The prior section gave sociotechnical context for the performance of the SHA-1 collision compute,
 giving many explanations across a wide variety of contexts.
@@ -268,7 +280,7 @@ in centering the material nature of performed computation
 in describing its agential power in sociotechnical discourses.
 
 \subsection{Defining polemic computation}
-\label{sec:orgcf61f92}
+\label{sec:org726fca6}
 
 This paper defines \emph{polemic computation} 
 as a computation enacted (rather than discussed)
@@ -287,7 +299,7 @@ to other theories of charismatic technology and critical design,
 highlighting the relevant differences between our theories and these. 
 
 \subsection{Charismatic technology}
-\label{sec:orga9eed7b}
+\label{sec:org1bc6f55}
 
 Indeed, polemic computation can be said to ``work'' in part 
 because it is animated by ideological frameworks.
@@ -305,6 +317,8 @@ agency in the technosocial discourses around privacy and security.
 Indeed, much like in Ames case of the One Laptop Per Child project,
 polemic computation aims to change behavior and beliefs among specific stakeholders in specific debates.
 
+\uline{power, about power indeed power plays in here as the resources are a "feat" for which uch power is required\ldots{}\ldots{}\ldots{}.works in th polemic debate\ldots{}\ldots{}\ldots{}\ldots{}}
+
 However, in contrast to charismatic technology, polemic computation 
 centers the material act of computing as a \emph{feat} with costs in time and energy.
 In energy, computation expends valuable and scarce ecological resources \cite{SixSilberman2015}.
@@ -313,7 +327,7 @@ Rather than computing answers, polemic computation uses the material feat of exp
 to work as an agent in technosocial discourse.
 
 \subsection{Critical design}
-\label{sec:orgc991dfc}
+\label{sec:org7ccf681}
 
 Another strand of research that explicitly centers the agency of technological artifacts
 is critical design \cite{Dunne2001}.
@@ -330,7 +344,7 @@ used its material power \cite{Bennett2013a} along with a touch of humor to enter
 
 
 \section{Ecological Risks, Polemic Rewards}
-\label{sec:orga14cf97}
+\label{sec:orgb3ba397}
 
 The prior section outlined explanations for why the SHA1 compute was performed, 
 and proposed a theory of polemic computation typifying such explanations.
@@ -351,7 +365,7 @@ In general, future work should explore the space of risks and rewards
 associated with polemic computes from a variety of ethical, legal and economic standpoints.
 
 \subsection{Volunteer distributed computing projects}
-\label{sec:org74f826d}
+\label{sec:orga3d3a49}
 
 Some projects have aimed to perform large computations by distributing the work across multiple machines,
 particularly commodity hardware supplied by volunteers.
@@ -377,7 +391,7 @@ The computational work (and associated costs) might be fruitfully examined to ot
 such as protein folding.
 
 \subsection{Web applications as supercomputation}
-\label{sec:org6f7dd0b}
+\label{sec:orga08f9a8}
 
 Web applications share some properties with the volunteer distributed computing applications mentioned above.
 Much computation is offloaded onto commdity clients, such as mobile phone apps or web browsers.
@@ -396,7 +410,7 @@ Such polemic decisions may have real ecological consequences.
 
 
 \subsection{Rise of machine learning}
-\label{sec:org67a2fe3}
+\label{sec:orgb032e46}
 
 Some work in machine learning blurs the line 
 between polemic intent and answer-finding.
@@ -418,7 +432,7 @@ of performance in particular competitions, or against particular benchmarks \cit
 
 
 \section{Conclusion}
-\label{sec:org602f3fc}
+\label{sec:orgeed12ab}
 
 Using the example of a relatively modest large-scale compute,
 this paper highlights broader tensions about when and when not to compute.
@@ -433,7 +447,7 @@ how to use restraint?
 
 
 \section{Acknowledgements}
-\label{sec:orgb85df21}
+\label{sec:org85cf661}
 Morgan Aimes, Nick Doty, Anette Greiner, Sebastian Benthall
 
 \bibliographystyle{ACM-Reference-Format}

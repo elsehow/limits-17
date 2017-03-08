@@ -43,7 +43,9 @@ larger narratives of authenticity, privacy and security on the internet.
 
 Polemic computes, even important ones, weigh political and social goals against ecological (and other) costs.
 This paper aims to begin questions about how polemic computes can and should work within ecological limits.
+In other words, I aim to surface questions about the limits of how far computation /should/ go to prove our point.
 I conclude with how this debate might carry forward in distributed computing, web applications and machine learning (Section 6).
+
 
 * Background
 
@@ -91,6 +93,7 @@ the result caused concern among cryptographers cite:Schneier2005.
 By 2011, a 2^61 calculation attack was discovered cite:Stevens2013a,
 and by the mid 2010s, the developers of most major browsers had announced plans to stop accepting SHA-1 SSL certificates 
 cite:Mozilla2017,Sleevi2014.
+
 
 * Performing a Collision
 
