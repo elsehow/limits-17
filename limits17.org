@@ -31,14 +31,15 @@ Are such computethis s worth
 the ecological costs, and the opportunity costs, compared to other things one could compute?
 
 This paper reads the SHA1 collision compute (Section 2), and the various sociotechnical entanglements that motivated it to be performed (rather than simply discussed) (Section 3),
-to motivate a throy forwards of /polemic computation/ (Section 4), 
-computations that, through the feat of the resources expended on them, 
-work primarily to enter into sociotechnical discourses animated with particular narratives and aims.
-
+to motivate a theory of /polemic computation/ (Section 4), 
+computations that
+work primarily to enter into sociotechnical discourses.
 In the case of the SHA-1 compute, researchers took on a sizeable monitory and environmental cost
 to enforce a point of view among specific stakeholders in the (social, political) economy of SSL certificates.
 In so doing, the compute's aims are animated by
 larger narratives of authenticity, privacy and security on the internet.
+# , animated with particular narratives and aims.
+# , through the feat of the resources expended on them,
 
 Polemic computes, even important ones, weigh political and social goals against ecological (and other) costs.
 This paper aims to begin questions about how polemic computes can and should work within ecological limits.
@@ -56,7 +57,7 @@ they take some data, and produce some new data, such that the original data cann
 SHA1 is one cryptographic hash function, designed by the NSA in the early 1990s.
 For some block of any-sized data, SHA1 produces a 40-digit string of characters.
 It is used in most version control applications to refer uniquely to files. SHA1 may also be used to check for corrupted files. 
-Crucially, as we will discuss in Section 3, SHA1 is also used in security-oriented protocols such as SSH/TLS.
+Crucially, as I will discuss in Section 3, SHA1 is also used in security-oriented protocols such as SSH/TLS.
 
 
 ** SHA1 collisions
@@ -106,10 +107,10 @@ Of course, time is not the only cost to consider.
 Computation is material, physically instiantiated, and has physical, ecological consequences.
 Beyond monetary cost, such large computations have very real costs in energy.
 Since the implementation details of the infrastructures used for the large collision compute are not entirely knowable from the paper,
-we cannot say exactly what this cost in energy was.
-The monetary cost of such a compute on Cray supercomputers would be on the order of a million dollars
-cite:Pautsch2016
-(though such estimates might vary widely in either direction from system to system).
+it is difficult to estimate this energy cost.
+As a rough point of comparison, the monetary cost of such a compute on Cray supercomputers would be on the order of a million dollars
+(though such estimates might vary widely in either direction from system to system)
+cite:Pautsch2016.
 In any case, such a figure is a tiny sliver of Alphabet, Inc's over 90 billion dollar revenue in 2016.
 
 This section gave background on SHA1 collisions, 
@@ -149,22 +150,24 @@ we must briefly argue for why an argument of academic interest does not sufficie
 The computation here ended up being more difficult than theoretical results indicated due to the storage and communication requirements necessary to perform the work across multiple datacenters. 
 The collision compute reveals details relevant
 to knowing how realistic the threat is in practice. 
-
-All cryptography can be broken with sufficient computational time.
-Cybersecurity practice depends on navigating the costs and benefits for adversaries, and their presumed resourcefulness
-This result shows that a powerful attack (such as Google) can indeed break SHA1 with some knowable resources.
-Surely, if Google can perform such an attack, a government actor could do so as well.
-One question raised by the polemics of this compute is, ``do SHA-1 users have assets worth at least as much as the cost of this compute?''
-
-Of course, given that SHA1 has already been widely deprecated, this explanation does not answer why such an academic exercise was considered necessary.
+Of course, given that SHA1 has already been widely deprecated, this explanation does not in itself answer why such an exercise was considered necessary.
 After all, one would not need to know the cost in practice of such an exercise without some reason.
-The following section explains the performance of this collision in the context of SSL certificates, some of which rely on SHA-1 to provide cryptographic guarantees.
 
-** SHA-1 and SSL Certificates
+Indeed, one reason, aside from the particular answer computed, is that the compute raises a question and challenge to users of SHA-1:
+``Do SHA-1 users have assets worth at least as much as the cost of this compute?''
+All cryptography can be broken with sufficient computational time.
+This result shows that a powerful attack (such as Google) can indeed break SHA1 with some knowable resources.
+And, surely, if Google can perform such an attack, a government actor could do so as well.
+# Cybersecurity practice depends on navigating the costs and benefits for adversaries, and their presumed resourcefulness
 
-Some users of SHA1 did not care much about the demonstrated attack.
+Of course, some users of SHA1 did not care much about the demonstrated attack.
 Linus Torvalds, developer of the Git version control software (which relies on SHA1 to refer to files), reported no immediate concern.
 ``Do we want to migrate to another hash? Yes. Is it 'game over' for SHA1 like people want to say? Probably not.'' cite:Torvalds2017.
+The following section explains the performance of this collision in the context of 
+an application in which stakes are potenitally much higher:
+the issuance of SSL certificates, some of which rely on SHA-1 to provide cryptographic guarantees.
+
+** SHA-1 and SSL Certificates
 
 SHA1 is also used in the issuance of (especially older) SSL certificates.
 (SSL certificates
@@ -180,7 +183,7 @@ SSL certificates are issued by Certificate Authorities (CAs), which in theory ab
 regulations set by the CA/Browser Forum, a standards-setting body.
 Here unravels a more complex story of regulation and standards bodies,
 as well as stakeholders for whom a change away from SHA-1 could incur significant monetary costs.
-The following sections examine the impact of this attack on both CAs, and browser developers. 
+The following sections examine the polemic impact of this attack on both CAs, and browser developers. 
 
 *** Certificate authorities
 
@@ -192,44 +195,62 @@ However, Since CAs are decentralized, and since SSL issuees (website administrat
 Assuming they were not, one explanation for performing this compute is that doing so would encourage CAs (and webmasters) to wisen up to the threat posed by SHA-1,
 putting some real pressure on them by freely releasing code that could result in forged certificates cite:Stevens2017github.
 
-*** TODO Browser press
+_quick conclusory paragraph............._
+
+*** Browser developers
 
 Alongside the issue of enforcing proper security practices on a decentralized system of certificate authorities, 
-there is a separate ecosystem of browser producers.
-While browser production is also decentralized, it is less so than CAs
-_(what % of people use browsers? chart here could help? maybe a figure of CAs as well)_.
-_lots of browsers have stopped accepting SHA-1:_
+a separate ecosystem of browser developers exercises independent authority to accept, or reject, certificates issued by CAs.
+While browser production is also decentralized, it is less so than CAs (Figure 1).
+https://w3techs.com/technologies/overview/ssl_certificate/all _pie chart of this graph....next to browser share_
+
+According to these statistics, _the majority??????_ of browsers on the web had already agreed to stop accepting SHA-1 SSL certificates,
+even before this compute took place
 cite:Sleevi2014,Mozilla2017.
-_(between windows, chrome, firefox some % percent of web browsers would have no longer accepted SHA-1 signed SSL certificates, even if the compute never took place............_
+So, regardless of what certificate authorities do, users of these browsers would have been protected from any vulnerabilities in SHA-1, 
+and the CAs would have faced additional market pressure to move away from SHA-1.
 
-_however, the pressroom story......gotten flack_
-_at a very high level, browsers need their users to feel secure, or people will not use the web as much!!!!!!_
-_,,,,,, and gotten flack for it,,,,,,,,,,,,_
-
+If the performance of the collision compute was not necessary to change behaviors among browser developers
+(and thus to protect users),
+why was it performed?
+One explanation may come from the press room.
+Browser developers such as Mozilla and Google have gotten flack from their decision to reject SHA-1 certificates,
+given the still-theoretical nature of the hash's vulnerability.
 _so, another explanation is that this thing helps their PR by bolstering their decision, making it seem more reasonable or wahtever_.
+_it will probably stop such back-and-forth all together, helping ppl focus on other issues......this alone could have economic impacts within Google, Mozilla_
+_at a very high level, browsers need their users to feel secure, or people will not use the web as much!!!!!!_
+# While CA/B Forum had already agreed to deprecate SHA-1 for new certificates, it definitely bolsters the public position that Google had already taken 
+# that we should move away from trusting this algorithm. Firefox was, without any knowledge of this research, moving to mark SHA-1 certs as insecure, 
+# but it'll help Mozilla on the pushback they may receive about that decision. Articles continued to be written about whether Google and others were right in 
+# taking a hard line position against SHA-1, and "we showed an actual collision" is a strong piece of evidence for that debate. I don't know that it'll 
+# persuade people who had economic reasons for hoping we could continue SHA-1 certificate distribution for another year or whatever, 
+# but it certainly helps in the blogosphere/newsroom debate.
 
-# While CA/B Forum had already agreed to deprecate SHA-1 for new certificates, it definitely bolsters the public position that Google had already taken that we should move away from trusting this algorithm. Firefox was, without any knowledge of this research, moving to mark SHA-1 certs as insecure, but it'll help Mozilla on the pushback they may receive about that decision. Articles continued to be written about whether Google and others were right in taking a hard line position against SHA-1, and "we showed an actual collision" is a strong piece of evidence for that debate. I don't know that it'll persuade people who had economic reasons for hoping we could continue SHA-1 certificate distribution for another year or whatever, but it certainly helps in the blogosphere/newsroom debate.
-
-** TODO Extravegance 
+** TODO Extravegance, power
 
 # I can't believe how much computation Google spent on this. and why? the people who need to get the message - use sha-256 - have already got it, and hung up the phone. and the people who haven't gotten the message, is this really going to convince them? admittedly i don't know what i don't know w/r/t how this demo is supposed to affect industry practice, but the energy that must have gone into this absurd PDF compute makes me shudder. ----me
 
-# The SHA-1 collision demonstrated an attack feasible only for highly resourceful actors (for now). 
-# Such actors might be a government or, apparently, Google.
-This collision demonstrated not only the considerable resources required to exploit _[]_'s theoretical result,
+The SHA-1 collision demonstrated an attack feasible only for highly resourceful actors (for now). 
+Such actors might be a government or, apparently, Google.
+Thus, this collision demonstrated not only the considerable resources required to exploit _[]_'s theoretical result,
 but the vast resources that Google must have, if it is able to spend so heavily on a project with essentially polemic aims.
-Alternatively, the computation had the ulterior polemic aim of demonstrating Google's resources.
-By Bataille's theory of consumption _[]_, some share of all economic activity must be spent without gain _expand quite a bit here....._.
+
+One explanation is that this computation had the ulterior polemic aim of demonstrating Google's vast resources.
+_demonstration of brute strength.........................and thus power_
+
+_or, alternatively,_
+By Bataille's theory of consumption _[]_, some share of all economic activity must be spent without gain 
+_1 more sentence here, about extravegance....._.
 
 
 * The polemics of actually doing
 
 The prior section gave sociotechnical context for the performance of the SHA-1 collision compute,
 giving many explanations across a wide variety of contexts.
-However, as of now, we lack a theory for systematically typifying disparate explanations.
-In this section, we offer a theory to unify these explanations, that of /polemic computation/ (Section 5.1).
-Namely, that there is a polemic power to actually performing or enacting the computation,
-as compared to discussing it in theory.
+However, as of now, we lack a theory for systematically typifying these disparate explanations.
+In this section, I propose a definition of /polemic computation/ to describe motivations for performing computes such as those above (Section 5.1).
+Namely, we propose that some computation is performed because there is a polemic power to doing so, 
+and that the material resources expended on such a computation take agency in particular sociotechnical debates.
 We tie this theory to that of charismatic technology (Section 5.2)
 and to critical design (Section 5.3)
 in centering the material nature of performed computation
@@ -270,6 +291,8 @@ Drawing on actor-network theory, charismatic technology would ascribe the very a
 agency in the technosocial discourses around privacy and security.
 Indeed, much like in Ames case of the One Laptop Per Child project,
 polemic computation aims to change behavior and beliefs among specific stakeholders in specific debates.
+
+_power, about power indeed power plays in here as the resources are a "feat" for which uch power is required..........works in th polemic debate............_
 
 However, in contrast to charismatic technology, polemic computation 
 centers the material act of computing as a /feat/ with costs in time and energy.
@@ -373,7 +396,7 @@ Some work in machine learning blurs the line
 between polemic intent and answer-finding.
 Image recognition benchmarks provide one example of this phenomenon:
 while a good image recognition algorithm certainly /can/ have intrinsic value in other domains 
-(e..g in transfer learning cite:Jean2016c),
+(e.g, in transfer learning cite:Jean2016f),
 the production of such an algorithm is often incidental to the production of the benchmark.
 Benchmarks serve to mark or legitmize the algorithm's architecture (especially in the case of neural nets)
 for the classification problem.
