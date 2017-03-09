@@ -206,7 +206,8 @@ putting some real pressure on them by freely releasing code that could result in
 
 In effect, the very existence of an exploit makes CAs who continue not to abide by CA/F rules more liable.
 Thus, this rather costly collision compute worked to an extent as an agent of enforcement,
-``correcting'' the behavior of CAs in ways existing standards bodies were unable to carry out.
+``correcting'' (that is, enforcing a perspective upon) CAs in ways existing standards bodies were unable to do.
+
 
 *** Browser developers
 
@@ -292,6 +293,7 @@ However, in contrast to charismatic technology, polemic computation
 centers the material act of computing as a /feat/ with costs in time and energy.
 In energy, computation expends valuable and scarce ecological resources cite:SixSilberman2015.
 In time and energy, computational incurs opportunity costs, through answers that could have been computed but were not.
+
 Rather than computing answers, polemic computation uses the material feat of expenditure 
 to work as an agent in technosocial discourse.
 Indeed, the SHA1 collision demonstrated an attack feasible only for highly resourceful actors (for now). 
@@ -321,7 +323,7 @@ The prior section outlined explanations for why the SHA1 compute was performed,
 and proposed a theory of polemic computation typifying such explanations.
 A separate question that I have not yet addressed 
 is whether or not the compute /should/ have been performed,
-given the ecological costs (energy and CO2), and the opportunity costs (what else could they could have computed instead, e.g. protein folding). 
+given the ecological costs (energy and CO2), and the opportunity costs (what could they could have computed instead?).
 
 More generally, in the case of computations with polemic aims,
 how do we decide when to compute?
@@ -347,9 +349,9 @@ The power of this approach lies in its ability to scale ``horizontally,''
 across a wide variety of readily-accessible (and widely deployed) machines.
 
 However, individual machines may not be as efficient in power 
-as large-scale server farms.
-Additional costs in energy are incurred by added network transmissions,
-and the generally lower power-efficiency of commodity devices.
+as large-scale facilities.
+Network transmissions, and the generally lower power-efficiency of commodity devices.
+incur additional costs in energy.
 These projects reduce capital overhead for those running the compute,
 but may exacerbate ecological risks.
 # so, let's not decentarlize everything...some things it makes ecological sense to centralize
@@ -425,7 +427,7 @@ how to use restraint?
 
 
 * Acknowledgements
-Much thanks to Morgan Aimes, Nick Doty, Anette Greiner, Sebastian Benthall and John Chuang for comments, notes and conversations.
+Thanks to Morgan Aimes, Nick Doty, Anette Greiner, Sebastian Benthall and John Chuang for their comments and conversations.
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{refs}
