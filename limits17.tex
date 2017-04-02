@@ -1,4 +1,4 @@
-% Created 2017-03-08 Wed 20:20
+% Created 2017-04-02 Sun 10:48
 % Intended LaTeX compiler: pdflatex
 \documentclass[sigconf]{acmart}
 \usepackage[utf8]{inputenc}
@@ -40,7 +40,7 @@
 \epigraph{I insist on the fact that there is generally no growth but only a luxurious squandering of energy in every form!}{Georges Batailles, \textit{The Accursed Share}}
 
 \section{Introudction}
-\label{sec:org30fe3f9}
+\label{sec:org38f0146}
 
 From protein folding to the discovery of novel drugs,
 some large computes are for the best
@@ -67,7 +67,7 @@ I conclude with how this debate might carry forward in various applications rang
 
 
 \section{Background}
-\label{sec:org34c4b46}
+\label{sec:org6eacf73}
 
 
 Before discussing Google's large compute in depth,
@@ -82,7 +82,7 @@ Crucially, as I will discuss in Section 3, SHA1 is also used in security-oriente
 
 
 \subsection{SHA1 collisions}
-\label{sec:org5fc14b0}
+\label{sec:org7d11859}
 
 The hashes output by SHA1 are typically 40 digits, regardless of the size of the input data.
 Crucially, hashes \emph{should} relate uniquely to input data: 
@@ -91,12 +91,19 @@ A \emph{collision} refers to the breakdown of this property,
 in which two different input data produce identical hashes.
 
 Collisions break several common uses of SHA1. 
-(Amusingly, a test that captured Google's collision test broke the version control system for the WebKit browser engine \cite{Koivisto2017}).
-In the case of SSL/TLS, the protocol for encrypted and authenticated communication on the web, SHA1 collisions have more severe consequences.
+Amusingly, a test in the WebKit browser engine's source code
+broke the version control system used for that repository \cite{Koivisto2017}.
+Subversion, which WebKit's repository relies on, uses SHA-1 hashes to refer uniquely to source code files.
+A test aimed at capturing the SHA-1 collision incidentally included two different files with the same hash, 
+causing a break in the repository software, which temporarily halted development.
+(Git sidesteps this issue by using an additional code  attached to the SHA-1 hash \cite{Torvalds2017}).
+
+In the case of SSL/TLS, the protocol for encrypted and authenticated communication on the web, SHA1 collisions could have even more severe consequences;
+namely, breaks to authenticity and/or security in web connections.
 Section 5 will return to TLS vulnerability in more detail.
 
 \subsection{SHA1 collisions in theory}
-\label{sec:orge381eea}
+\label{sec:orga808bf1}
 
 In discussing the safey of particular hash functions, two questions must be asked:
 (1) how long would it take to find a collision by brute force?, and 
@@ -117,7 +124,7 @@ and by the mid 2010s, the developers of most major browsers had announced plans 
 
 
 \section{Performing a Collision}
-\label{sec:org31a5525}
+\label{sec:org698be79}
 
 The study in question here produced two PDFs with different content, but identical SHA1 hashes
 \cite{Stevens2017}.
@@ -145,12 +152,12 @@ in practice, rather than simply discussed in theory.
 
 
 \section{Explaining why the compute happened}
-\label{sec:org2dc1e6f}
+\label{sec:orgdcfabee}
 
 \begin{figure*}
 \centering
 \includegraphics[width=.9\linewidth]{./figures/browser-share.png}
-\caption{TODO Explain how many browsers would have ignored SHA1s anwyway, even if this compute never happened.}
+\caption{Proportion of internet users by browser (left), and proprotion of browser usage with plans to block SHA-1 certicates (right). A majority of browsers had already announced plans to deprecate SHA-1 certificates, even before the collision was demonstrated. However, some older browsers have continued to accept these certificates.}
 \end{figure*}
 
 Since a theoretical result already existed showing a SHA1 collision was possible, 
@@ -171,7 +178,7 @@ and aimed to change opinions and behavior among specific groups of stakeholders.
 This section focuses in particular on those involved in the ecosystem of SSL certificates: browsers, webmasters, and the certificate authorities (CAs) tasked with generating certificates.
 
 \subsection{Practice versus theory}
-\label{sec:org309edc8}
+\label{sec:org86565b5}
 
 Before progressing onto a discussion of this compute on the ecosystem of SSL certificates,
 we must briefly argue for why an argument of academic interest does not sufficiently explain why this compute was performed, rather than simply discussed.
@@ -196,12 +203,12 @@ an application in which stakes are potentially much higher:
 the issuance of SSL certificates, some of which rely on SHA1 to provide cryptographic guarantees.
 
 \subsection{SHA1 and SSL Certificates}
-\label{sec:org383e8e2}
+\label{sec:orgd2ac60b}
 
 \begin{figure}[t!]
 \centering
 \includegraphics[width=.9\linewidth]{./figures/ca-share.png}
-\caption{TODO Explain how many browsers would have ignored SHA1s anwyway, even if this compute never happened.}
+\caption{The distribution of SSL certificates on the web, by certificate authority (CA). While a few CAs lead in market share, a large number of smaller CAs issue a smaller proportion of certificates. Compared to the relatively more centralized market of browser share (Figure 1), this market fragmentation makes enforcement more difficult, as coordination and consensus must be acheived over a larger number of stakeholders.}
 \end{figure}
 
 SHA1 is also used in the issuance of (especially older) SSL certificates.
@@ -221,7 +228,7 @@ as well as stakeholders for whom a change away from SHA1 could incur significant
 The following sections examine the polemic impact of this attack on both CAs, and browser developers. 
 
 \subsubsection{Certificate authorities}
-\label{sec:org67a2c0a}
+\label{sec:org5dd75e3}
 
 First, the SHA1 attack can be mediated entirely by
 replacing old SHA1 certificates with newer ones using SHA-2 or SHA-3.
@@ -238,7 +245,7 @@ Thus, this rather costly collision compute worked to an extent as an agent of en
 
 
 \subsubsection{Browser developers}
-\label{sec:orgdfbae44}
+\label{sec:org9f9a020}
 
 Alongside the issue of enforcing proper security practices on a decentralized system of certificate authorities, 
 a separate ecosystem of browser developers exercises independent authority to accept, or reject, certificates issued by CAs.
@@ -263,7 +270,7 @@ browsers need their users to feel secure, as customers will flee if they do not 
 
 
 \section{The polemics of actually doing}
-\label{sec:org13d1fba}
+\label{sec:orgffcc0aa}
 
 The prior section gave sociotechnical context for the performance of the SHA1 collision compute,
 giving many explanations across a wide variety of contexts.
@@ -277,7 +284,7 @@ in centering the material nature of performed computation
 in describing its agential power in sociotechnical discourses.
 
 \subsection{Defining polemic computation}
-\label{sec:org7477abf}
+\label{sec:org1d6392a}
 
 This paper defines \emph{polemic computation} 
 as a computation enacted (rather than discussed)
@@ -294,7 +301,7 @@ to other theories of charismatic technology and critical design,
 highlighting the relevant differences to our theories.
 
 \subsection{Charismatic technology}
-\label{sec:org2d2ddcd}
+\label{sec:orgd8e1a0c}
 
 Polemic computation can be said to ``work'' in part 
 because it is animated by ideological frameworks.
@@ -328,7 +335,7 @@ Thus, this collision demonstrated not only the considerable resources required t
 but the vast resources that Google must have, if it is able to spend so heavily on a project with essentially polemic aims.
 
 \subsection{Critical design}
-\label{sec:org58422be}
+\label{sec:org2505d4f}
 
 Another strand of research that explicitly centers the agency of technological artifacts
 is critical design \cite{Dunne2001}.
@@ -345,7 +352,7 @@ used its material power \cite{Bennett2013a} along with a touch of humor, to ente
 
 
 \section{Ecological Risks, Polemic Rewards}
-\label{sec:org24887b8}
+\label{sec:orgbb6df6d}
 
 The prior section outlined explanations for why the SHA1 compute was performed, 
 and proposed a theory of polemic computation typifying such explanations.
@@ -366,7 +373,7 @@ In general, future work should explore the space of risks and rewards
 associated with polemic computes from a variety of ethical, legal, ecological and economic standpoints.
 
 \subsection{Volunteer distributed computing projects}
-\label{sec:orgb6f2cb0}
+\label{sec:org7601b17}
 
 Some projects have aimed to perform large computations by distributing the work across multiple machines,
 particularly commodity hardware supplied by volunteers.
@@ -393,7 +400,7 @@ such as protein folding.
 
 
 \subsection{Web applications as supercomputation}
-\label{sec:org2c66f3b}
+\label{sec:org143c2b4}
 
 Web applications share some properties with the volunteer distributed computing applications mentioned above.
 Much computation is offloaded onto commodity clients, such as mobile phone apps or web browsers.
@@ -412,7 +419,7 @@ Such polemic decisions may have real ecological consequences.
 
 
 \subsection{Rise of machine learning}
-\label{sec:org3866a29}
+\label{sec:org165f7b3}
 
 Some work in machine learning blurs the line 
 between polemic intent and answer-finding.
@@ -434,7 +441,7 @@ of performance in particular competitions or benchmarks \cite{SixSilberman2015}.
 
 
 \section{Conclusion}
-\label{sec:orgfd3a247}
+\label{sec:org72096ad}
 
 Using the example of a particular large-scale compute,
 this paper highlights broader tensions about when and when not to compute.
@@ -449,9 +456,53 @@ how to use restraint?
 
 
 \section{Acknowledgements}
-\label{sec:org3cdafe2}
+\label{sec:org0ce3b81}
 Thanks to Morgan Aimes, Nick Doty, Anette Greiner, Sebastian Benthall and John Chuang for their comments and conversations.
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{refs}
+
+\section{Reviews}
+\label{sec:org6daed1f}
+I have mixed feelings about this paper because on the one hand I feel like it
+made me think about an interesting issue:  Is there an ethical dimension to the
+use of computation resources to accomplish a "feat"?  Given the amount of
+resources that feats require and the fact that the "only" function as symbolic
+references in technical arguments, should they be resisted so that the resources
+consumed could be put to more just, valuable, critical endeavors?  I think that
+is a valuable contribution.   The paper could use a substantial revision and
+tightening of its argument around this point.
+
+A few ideas that came up that complicated the idea was "proof of work"
+computations.   Bitcoin uses "proof of work" to validate monetary transactions,
+but the product of the work itself is useless only the fact that the work was
+done matters. This seems to fit right in the definition of polemic computing,
+but then doesn't because it is necessary for bitcoin to function.
+
+Secondly, why is the feat not valuable if it "only" promotes a sociotechnical
+discourse.   If that is necessary to push security past SHA1, why is that not as
+important as trying to generate a new synthetic drug.  There is something that
+at first glance seems useless about the SHA1 computation, that upon more
+reflection seems not to hold up. The fact that Google devoted resources to it
+actually makes the argument that it was worthwhile.  It at least seems more
+worthwhile than calculating more digits of PI.
+
+
+I didn't find the examples beyond the SHA1 computation very compelling.  Maybe
+they would be if more space was devoted to them.
+
+
+This paper proposes that some computation is "polemic", meaning that the computation is performed primarily to "enter into sociotechnical discourses" or "forward an argument or ideology" rather than for another set of reasons that I don't find concisely articulated but are exemplified by the author via protein folding and discovering novel drugs. The recent SHA1 collision computation is given as an example. A nascent theory of polemic computation is proposed, and the question of when and when not to compute is brought to the forefront.
+
+I have concerns about many details of the paper, and I suspect these would come up in discussion. If the author could address some of them in a revision, then perhaps the discussion could be more focused on the most interesting ideas.
+
+One concern comes through in my summary: what is the opposite of a polemic computation? A computation "for the best"? For whose best? Don't many (even all) computations enter socio-technical discourses? For example, the search for novel drugs is inextricably tied up in the economics of big pharma, the question of whether all diseases should be treated, the allocation of resources to conditions affecting very few people, perhaps away from treatments that would impact many. The literature on the social construction of technology may be relevant.
+\ldots{}\ldots{}GREAT POINT, DEF FOR DISCUSSION\ldots{}\ldots{}\ldots{}\ldots{}.
+
+To deeply understand what the SHA1 computation was performed, it would seem valuable to interview the people who conducted and approved the use of computation for this purpose. What do they say about why it was performed? 
+\ldots{}..ADD TO DISCUSSION, FUTURE WORK\ldots{}..
+
+You seem to have in mind a hierarchy of better and worse reasons to conduct computation. Do you? If so, what is it? Is it appropriate to have a hierarchy?
+
+The examples in Section 6 seem to focus on energy consumption. What are the other considerations in deciding on where computation takes place (as come through in 6.1 and 6.2)? I did not understand your example in Section 6.3. You may need more explanation of benchmarks, algorithm architectures, neural net training, to allow a general CS audience to appreciate your point.
 \end{document}
