@@ -10,7 +10,7 @@
 #+LATEX_HEADER: \acmYear{2017}
 #+LATEX_HEADER: \copyrightyear{2017}
 #+LATEX_HEADER: \acmPrice{15.00}
-#+TITLE: Better Not to Know?
+#+TITLE: Better Not to Know? 
 #+Author: 
 #+SUBTITLE: The SHA1 Collision & the Limits of Polemic Computation
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style1.css" />
@@ -20,31 +20,33 @@
 \epigraph{I insist on the fact that there is generally no growth but only a luxurious squandering of energy in every form!}{Georges Batailles, \textit{The Accursed Share}}
 #+END_EXPORT
 
-* Introudction
+* Introduction
 
 From protein folding to the discovery of novel drugs,
-some large computes are for the best
+large computes can find valuable answers to important questions
 cite:Anderson2004.
-But what about computing ever-increasing digits of pi?
-What about finding two PDFs with different content, but identical checksums?
-Are such computes worth
-the ecological costs, and the opportunity costs, compared to other things one could compute?
+They also invariably enter into sociotechnical discourses,
+becoming inexorably intertwined in the politics, economics and epistemologies 
+of particular fields, disciplines and institutions cite:Ames2015.
 
-This paper reads the SHA1 collision compute (Section 2), and the various sociotechnical entanglements that motivated it to be performed (rather than simply discussed) (Section 3),
+This paper reads the SHA1 collision compute (Section 2), and the various sociotechnical entanglements that motivated its performance (as opposed to discussion) (Section 3),
 to motivate a theory of /polemic computation/ (Section 4), 
-computations that
-work primarily to enter into sociotechnical discourses.
+computations that work to enter into sociotechnical discourses
+by virtue of the ``feat'' of having computed a particular result,
+rather than by virtue of the specific result computed.
 In the case of the SHA1 compute, researchers took on a sizeable monetary and environmental cost
 to enforce a point of view among specific stakeholders in the (social, political) economy of SSL certificates.
 In so doing, the compute's aims are animated by
 larger narratives of authenticity, privacy and security on the Internet.
-# , animated with particular narratives and aims.
-# , through the feat of the resources expended on them,
+# This paper focuses on computes in which the particular answer computed
+# takes a back seat to the ``feat'' of having performed the computation at all.
 
 Polemic computes, even important ones, weigh political and social goals against ecological (and other) costs.
-This paper aims to begin questions about how polemic computes can and should work within limits.
-This paper does not offer a rigorous theory of how polemics might be balanced against limits (of time, energy, opportunity);
-rather I aim to surface questions about the limits of how far computation /should/ go to prove our point.
+Of course, so do all other computes: all computation enters into sociotechnical entanglement, commitments.
+This paper does not claim that polemic computes are better or worse than any other class of computes. 
+Rather, this paper raises an ethical question about the limits within polemic computes must work.
+Given the resources that feats require, and their symbolic nature,
+when should they be resisted, so that the resources consumed could be put to other endeavors? When should they be embraced?
 I conclude with how this debate might carry forward in various applications ranging from distributed computing to web applications and machine learning (Section 6).
 
 
@@ -324,100 +326,32 @@ Much in the tradition of critical design
 used its material power cite:Bennett2013a along with a touch of humor, to enter into technosocial debates and imaginaries.
 
 
-* Ecological Risks, Polemic Rewards
+* TODO final section
 
-The prior section outlined explanations for why the SHA1 compute was performed, 
-and proposed a theory of polemic computation typifying such explanations.
-A separate question that I have not yet addressed 
-is whether or not the compute /should/ have been performed,
-given the ecological costs (energy and CO2), and the opportunity costs (what could they could have computed instead?).
+complicate the theory using cryptocurrencies as a counterpoint
 
-More generally, in the case of computations with polemic aims,
-how do we decide when to compute?
-How can we weigh costs (of all sorts) against the potential (polemic) benefits?
-This question could be framed from both an ethical perspective, 
-and from an econometric one.
-This section aims to outline potential avenues for future work
-by reviewing various classes of compute projects,
-highlighting ways in which they could be considered polemic,
-and surfacing the field of limits, risks, and rewards associated with each.
-In general, future work should explore the space of risks and rewards
-associated with polemic computes from a variety of ethical, legal, ecological and economic standpoints.
-
-** Volunteer distributed computing projects
-
-Some projects have aimed to perform large computations by distributing the work across multiple machines,
-particularly commodity hardware supplied by volunteers.
-A popular platform, BOINC (Berkeley Open Infrastructure for Network Computing)
-allows projects to utilize a vast network of volunteers' computing time, 
-for example, when their laptop is idle, as a screensaver
-cite:Anderson2004.
-The power of this approach lies in its ability to scale ``horizontally,''
-across a wide variety of readily-accessible (and widely deployed) machines.
-
-However, individual machines may not be as efficient in power 
-as large-scale facilities.
-Network transmissions, and the generally lower power-efficiency of commodity devices.
-incur additional costs in energy.
-These projects reduce capital overhead for those running the compute,
-but may exacerbate ecological risks.
-# so, let's not decentarlize everything...some things it makes ecological sense to centralize
-
-Future work might examine volunteer computing projects through the lens of polemic computation.
-Projects like SETI (Search for Extraterrestrial Intelligence at Home), which have users perform fast fourier transforms on billions of hours of radio recordings,
-serve as much to engage in discourses around science and the public as they do to produce useful data 
-cite:Anderson2004.
-The computational work (and associated costs) might be fruitfully examined to other distributed projects, 
-such as protein folding.
-
-# Cryptocurrencies present another class of distributed computing projects.
-# Proof of work schemes allow peers to perform computationally intensive tasks,
-# which give the currency a scarcity _[]_. 
-# The value of cryptocurrencies are tightly linked to the cost of particular computations,
-# and is thus limited by the capital cost of energy.
-# Since computation has the explicit use of constructing or making legible the value of a currency, 
-# it is difficult to evaluate such work as purely polemic.
-# However, th
+** describe how cryptocurrencies e.g. bitcoin work
 
 
-** Web applications as supercomputation
+** on one hand, compute intrinsic to value
+# Bitcoin uses "proof of work" to validate monetary transactions,
+# but the product of the work itself is useless only the fact that the work was
+# done matters. 
+# This seems to fit right in the definition of polemic computing,
+# but then doesn't because it is necessary for bitcoin to function.
 
-Web applications share some properties with the volunteer distributed computing applications mentioned above.
-Much computation is offloaded onto commodity clients, such as mobile phone apps or web browsers.
-Consumers of these applications trade their computational time, and electricity, in exchange for the service.
-Consider Netflix, which retains a centralized system of indexing and content delivery,
-but offloads to consumers the processing associated with watching videos 
-(downloading videos, along with decrypting the digital rights management, decoding the video format, and finally playing the video and audio).
+** on the other, polemic dimension 
+raising q's/making points about currency itself
+trace cipherpunks and its political/technical/social/epistemological commitments
 
-Future work might examine the motivations for architectural decisions in web applications through 
-the polemics around Web 2.0 
-cite:Scholz2008,
-examining how discourse around ``thin clients'' and ``the cloud''
-interact with technical constraints
-to influence decisions in where processing takes place.
-Such polemic decisions may have real ecological consequences.
+** raise how lines can be blurred
+and why this is such a gr8! avenue for future work!!!
 
+* TODO Discussion
 
-** Rise of machine learning
+# What is the opposite of a polemic computation? A computation "for the best"? For whose best? Don't many (even all) computations enter socio-technical discourses? For example, the search for novel drugs is inextricably tied up in the economics of big pharma, the question of whether all diseases should be treated, the allocation of resources to conditions affecting very few people, perhaps away from treatments that would impact many. The literature on the social construction of technology may be relevant.
 
-Some work in machine learning blurs the line 
-between polemic intent and answer-finding.
-Image recognition benchmarks provide one example of this phenomenon:
-while a good image recognition algorithm certainly /can/ have intrinsic value in other domains 
-(e.g, in transfer learning cite:Jean2016f),
-the production of such an algorithm is often incidental to the production of the benchmark.
-Benchmarks serve to mark or legitimize the algorithm's architecture (especially in the case of neural nets)
-for the classification problem.
-
-Meanwhile, contemporary machine learning techniques, especially the training of neural nets, 
-require a tremendous amount of computation, and therefore a large expenditure of energy.
-Thus, when training algorithms in a computationally complex way,
-we must ask questions about the costs (and motivations) for doing so.
-Future work could raise questions about the polemics involved
-with particular attempts to train deep learning algorithms,
-examining their ecological costs against the sociotechnical goals 
-of performance in particular competitions or benchmarks cite:SixSilberman2015.
-
+# To deeply understand what the SHA1 computation was performed, it would seem valuable to interview the people who conducted and approved the use of computation for this purpose. What do they say about why it was performed? 
 
 * Conclusion
 
@@ -434,7 +368,7 @@ how to use restraint?
 
 
 * Acknowledgements
-Thanks to Morgan Aimes, Nick Doty, Anette Greiner, Sebastian Benthall and John Chuang for their comments and conversations.
+Thanks to Morgan Aimes, Nick Doty, Anette Greiner, Sebastian Benthall and John Chuang for their comments and conversations. Many thanks to Donald Patterson and Ellen Zegura for their very helpful reviews.
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{refs}
@@ -442,17 +376,15 @@ Thanks to Morgan Aimes, Nick Doty, Anette Greiner, Sebastian Benthall and John C
 * Reviews
 I have mixed feelings about this paper because on the one hand I feel like it
 made me think about an interesting issue:  Is there an ethical dimension to the
-use of computation resources to accomplish a "feat"?  Given the amount of
-resources that feats require and the fact that the "only" function as symbolic
-references in technical arguments, should they be resisted so that the resources
-consumed could be put to more just, valuable, critical endeavors?  I think that
-is a valuable contribution.   The paper could use a substantial revision and
+use of computation resources to accomplish a "feat"?  The paper could use a substantial revision and
 tightening of its argument around this point.
 
 A few ideas that came up that complicated the idea was "proof of work"
-computations.   Bitcoin uses "proof of work" to validate monetary transactions,
+computations.   
+Bitcoin uses "proof of work" to validate monetary transactions,
 but the product of the work itself is useless only the fact that the work was
-done matters. This seems to fit right in the definition of polemic computing,
+done matters. 
+This seems to fit right in the definition of polemic computing,
 but then doesn't because it is necessary for bitcoin to function.
 
 Secondly, why is the feat not valuable if it "only" promotes a sociotechnical
@@ -463,22 +395,13 @@ reflection seems not to hold up. The fact that Google devoted resources to it
 actually makes the argument that it was worthwhile.  It at least seems more
 worthwhile than calculating more digits of PI.
 
-
-I didn't find the examples beyond the SHA1 computation very compelling.  Maybe
-they would be if more space was devoted to them.
-
-
 This paper proposes that some computation is "polemic", meaning that the computation is performed primarily to "enter into sociotechnical discourses" or "forward an argument or ideology" rather than for another set of reasons that I don't find concisely articulated but are exemplified by the author via protein folding and discovering novel drugs. The recent SHA1 collision computation is given as an example. A nascent theory of polemic computation is proposed, and the question of when and when not to compute is brought to the forefront.
 
 I have concerns about many details of the paper, and I suspect these would come up in discussion. If the author could address some of them in a revision, then perhaps the discussion could be more focused on the most interesting ideas.
 
-One concern comes through in my summary: what is the opposite of a polemic computation? A computation "for the best"? For whose best? Don't many (even all) computations enter socio-technical discourses? For example, the search for novel drugs is inextricably tied up in the economics of big pharma, the question of whether all diseases should be treated, the allocation of resources to conditions affecting very few people, perhaps away from treatments that would impact many. The literature on the social construction of technology may be relevant.
-......GREAT POINT, DEF FOR DISCUSSION.............
-
-To deeply understand what the SHA1 computation was performed, it would seem valuable to interview the people who conducted and approved the use of computation for this purpose. What do they say about why it was performed? 
 .....ADD TO DISCUSSION, FUTURE WORK.....
 
 You seem to have in mind a hierarchy of better and worse reasons to conduct computation. Do you? If so, what is it? Is it appropriate to have a hierarchy?
 
-The examples in Section 6 seem to focus on energy consumption. What are the other considerations in deciding on where computation takes place (as come through in 6.1 and 6.2)? I did not understand your example in Section 6.3. You may need more explanation of benchmarks, algorithm architectures, neural net training, to allow a general CS audience to appreciate your point.
+# The examples in Section 6 seem to focus on energy consumption. What are the other considerations in deciding on where computation takes place (as come through in 6.1 and 6.2)? I did not understand your example in Section 6.3. You may need more explanation of benchmarks, algorithm architectures, neural net training, to allow a general CS audience to appreciate your point.
 
