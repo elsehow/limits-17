@@ -1,4 +1,4 @@
-% Created 2017-04-02 Sun 10:55
+% Created 2017-04-11 Tue 10:57
 % Intended LaTeX compiler: pdflatex
 \documentclass[sigconf]{acmart}
 \usepackage[utf8]{inputenc}
@@ -39,35 +39,37 @@
 
 \epigraph{I insist on the fact that there is generally no growth but only a luxurious squandering of energy in every form!}{Georges Batailles, \textit{The Accursed Share}}
 
-\section{Introudction}
-\label{sec:org7be6d3d}
+
+\section{Introduction}
+\label{sec:orgb977a0b}
 
 From protein folding to the discovery of novel drugs,
-some large computes are for the best
+large computes can discover valuable answers to important questions
 \cite{Anderson2004}.
-But what about computing ever-increasing digits of pi?
-What about finding two PDFs with different content, but identical checksums?
-Are such computes worth
-the ecological costs, and the opportunity costs, compared to other things one could compute?
+They also invariably enter into sociotechnical discourses,
+taking active agency in the politics, economics and epistemologies 
+of particular fields, disciplines and institutions \cite{Ames2015}.
+They also incur costs in energy and labor.
+Indeed, computes are material artifacts, instantiated in space and time;
+and share an essential form of agency, and power, with all material things \cite{Bennett2013a,Winner2003}.
 
-This paper reads the SHA1 collision compute (Section 2), and the various sociotechnical entanglements that motivated it to be performed (rather than simply discussed) (Section 3),
-to motivate a theory of \emph{polemic computation} (Section 4), 
-computations that
-work primarily to enter into sociotechnical discourses.
-In the case of the SHA1 compute, researchers took on a sizeable monetary and environmental cost
-to enforce a point of view among specific stakeholders in the (social, political) economy of SSL certificates.
-In so doing, the compute's aims are animated by
-larger narratives of authenticity, privacy and security on the Internet.
+This paper reads whe SHA1 collision compute (Sections 2 and 3), 
+and the various sociotechnical entanglements that motivated its performance (Section 4).
+in order to motivate and explain a theory of \emph{polemic computation} (Section 5).
+Polemic computations, I claim, enter into sociotechnical discourses through the \emph{feat} of their completion, rather than by virtue of a particular result computed.
+In the case of the SHA1 collision, the feat of the compute entered into existing discourses of authenticity, privacy and security on the Internet (Section 4).
 
-Polemic computes, even important ones, weigh political and social goals against ecological (and other) costs.
-This paper aims to begin questions about how polemic computes can and should work within limits.
-This paper does not offer a rigorous theory of how polemics might be balanced against limits (of time, energy, opportunity);
-rather I aim to surface questions about the limits of how far computation \emph{should} go to prove our point.
-I conclude with how this debate might carry forward in various applications ranging from distributed computing to web applications and machine learning (Section 6).
-
+The performance of the SHA1 collison weighed political goals around cybersecurity against fiscal, ecological, and opportunity costs.
+This paper does not opine on whether its performance was ``right'' or ``wrong,'' acceptable or not, justified or unjustified.
+Rather, it aims to raise discussion around the limits within which polemic computes can be considered acceptable (Section 6).
+When are feats are justified? 
+When should feats be resisted, due to their costs? 
+Through what moral, ethical, econometric frameworks could such questions even be evaluated? 
+In these questions lurk the shadows of larger debates around how, and why computations are deemed acceptable (and for whom):
+how do designations of acceptability relate to the costs fo computes, and to the social structures that are strengthened, weakened, or reified by their performance?
 
 \section{Background}
-\label{sec:orgb1d8381}
+\label{sec:org93837dd}
 
 
 Before discussing Google's large compute in depth,
@@ -82,7 +84,7 @@ Crucially, as I will discuss in Section 3, SHA1 is also used in security-oriente
 
 
 \subsection{SHA1 collisions}
-\label{sec:org690d7f7}
+\label{sec:org8cb0d12}
 
 The hashes output by SHA1 are typically 40 digits, regardless of the size of the input data.
 Crucially, hashes \emph{should} relate uniquely to input data: 
@@ -103,7 +105,7 @@ namely, breaks to authenticity and/or security in web connections.
 Section 5 will return to TLS vulnerability in more detail.
 
 \subsection{SHA1 collisions in theory}
-\label{sec:orgcab9aa6}
+\label{sec:org8cac18f}
 
 In discussing the safey of particular hash functions, two questions must be asked:
 (1) how long would it take to find a collision by brute force?, and 
@@ -122,9 +124,8 @@ By 2011, a 2\(^{\text{61}}\) calculation attack was discovered \cite{Stevens2013
 and by the mid 2010s, the developers of most major browsers had announced plans to stop accepting SHA1 SSL certificates 
 \cite{Mozilla2017,Sleevi2014}.
 
-
 \section{Performing a Collision}
-\label{sec:org3a8cccf}
+\label{sec:org29a7d5e}
 
 The study in question here produced two PDFs with different content, but identical SHA1 hashes
 \cite{Stevens2017}.
@@ -150,14 +151,13 @@ and gave context for the costs (in time and energy) of the SHA1 collision comput
 The following section details possible explanations for why the computation was performed
 in practice, rather than simply discussed in theory.
 
-
 \section{Explaining why the compute happened}
-\label{sec:org7cf84a9}
+\label{sec:org5a12f26}
 
 \begin{figure*}
 \centering
 \includegraphics[width=.9\linewidth]{./figures/browser-share.png}
-\caption{Proportion of internet users by browser (left), and proprotion of browser usage with plans to block SHA-1 certicates (right). A majority of browsers had already announced plans to deprecate SHA-1 certificates, even before the collision was demonstrated. However, some older browsers have continued to accept these certificates.}
+\caption{Proportion of Internet users by browser (left), and proportion of browser usage with plans to block SHA-1 certificates (right). A majority of browsers had already announced plans to deprecate SHA-1 certificates, even before the collision was demonstrated. However, some older browsers have continued to accept these certificates.}
 \end{figure*}
 
 Since a theoretical result already existed showing a SHA1 collision was possible, 
@@ -178,7 +178,7 @@ and aimed to change opinions and behavior among specific groups of stakeholders.
 This section focuses in particular on those involved in the ecosystem of SSL certificates: browsers, webmasters, and the certificate authorities (CAs) tasked with generating certificates.
 
 \subsection{Practice versus theory}
-\label{sec:orga9b1177}
+\label{sec:orgdcd11c2}
 
 Before progressing onto a discussion of this compute on the ecosystem of SSL certificates,
 we must briefly argue for why an argument of academic interest does not sufficiently explain why this compute was performed, rather than simply discussed.
@@ -203,12 +203,12 @@ an application in which stakes are potentially much higher:
 the issuance of SSL certificates, some of which rely on SHA1 to provide cryptographic guarantees.
 
 \subsection{SHA1 and SSL Certificates}
-\label{sec:org2762e1f}
+\label{sec:org4c74407}
 
 \begin{figure}[t!]
 \centering
 \includegraphics[width=.9\linewidth]{./figures/ca-share.png}
-\caption{The distribution of SSL certificates on the web, by certificate authority (CA). While a few CAs lead in market share, a large number of smaller CAs issue a smaller proportion of certificates. Compared to the relatively more centralized market of browser share (Figure 1), this market fragmentation makes enforcement more difficult, as coordination and consensus must be acheived over a larger number of stakeholders.}
+\caption{The distribution of SSL certificates on the web, by certificate authority (CA). While a few CAs lead in market share, a large number of smaller CAs issue a smaller proportion of certificates. Compared to the relatively more centralized market of browser share (Figure 1), this market fragmentation makes enforcement more difficult, as coordination and consensus must be achieved over a larger number of stakeholders.}
 \end{figure}
 
 SHA1 is also used in the issuance of (especially older) SSL certificates.
@@ -216,7 +216,7 @@ SHA1 is also used in the issuance of (especially older) SSL certificates.
 provide a token of the authenticity of a user's connection to a webpage,
 and encrypts data end-to-end).
 This practical result showed that someone with the power to perform a SHA1 collision could
-now make a fake certificate for a website with that uses SHA1 for nerits TLS.
+now make a fake certificate for a website with that uses SHA1 for its TLS.
 Such a false certificate could
 be used to convince a victim that they are communicating with a given website,
 when in fact they are communicating with the attacker.
@@ -228,7 +228,7 @@ as well as stakeholders for whom a change away from SHA1 could incur significant
 The following sections examine the polemic impact of this attack on both CAs, and browser developers. 
 
 \subsubsection{Certificate authorities}
-\label{sec:orgf46ccc7}
+\label{sec:org82221d8}
 
 First, the SHA1 attack can be mediated entirely by
 replacing old SHA1 certificates with newer ones using SHA-2 or SHA-3.
@@ -245,7 +245,7 @@ Thus, this rather costly collision compute worked to an extent as an agent of en
 
 
 \subsubsection{Browser developers}
-\label{sec:org118c0e6}
+\label{sec:orgf8c63d3}
 
 Alongside the issue of enforcing proper security practices on a decentralized system of certificate authorities, 
 a separate ecosystem of browser developers exercises independent authority to accept, or reject, certificates issued by CAs.
@@ -268,9 +268,8 @@ relates to browser PR, undercutting claims that the decision to deprecate SHA1 w
 Crucially, browsers has a vested interest in security:
 browsers need their users to feel secure, as customers will flee if they do not feel safe shopping and communicating on the Internet.
 
-
 \section{The polemics of actually doing}
-\label{sec:orga8c8654}
+\label{sec:org6703dbd}
 
 The prior section gave sociotechnical context for the performance of the SHA1 collision compute,
 giving many explanations across a wide variety of contexts.
@@ -284,7 +283,7 @@ in centering the material nature of performed computation
 in describing its agential power in sociotechnical discourses.
 
 \subsection{Defining polemic computation}
-\label{sec:org330ca11}
+\label{sec:org1bdb5b0}
 
 This paper defines \emph{polemic computation} 
 as a computation enacted (rather than discussed)
@@ -301,7 +300,7 @@ to other theories of charismatic technology and critical design,
 highlighting the relevant differences to our theories.
 
 \subsection{Charismatic technology}
-\label{sec:orgf105b17}
+\label{sec:org9d7d0dd}
 
 Polemic computation can be said to ``work'' in part 
 because it is animated by ideological frameworks.
@@ -335,7 +334,7 @@ Thus, this collision demonstrated not only the considerable resources required t
 but the vast resources that Google must have, if it is able to spend so heavily on a project with essentially polemic aims.
 
 \subsection{Critical design}
-\label{sec:orge4928a2}
+\label{sec:orgd24439d}
 
 Another strand of research that explicitly centers the agency of technological artifacts
 is critical design \cite{Dunne2001}.
@@ -350,159 +349,54 @@ acted to \emph{define} what is and is not a poor security practice for certifica
 Much in the tradition of critical design
 used its material power \cite{Bennett2013a} along with a touch of humor, to enter into technosocial debates and imaginaries.
 
+\section{{\bfseries\sffamily TODO} When is it better not to know?}
+\label{sec:orgc0c330a}
 
-\section{Ecological Risks, Polemic Rewards}
-\label{sec:org9d41e51}
+\subsection{So far this paper\ldots{}}
+\label{sec:org6105566}
 
-The prior section outlined explanations for why the SHA1 compute was performed, 
-and proposed a theory of polemic computation typifying such explanations.
-A separate question that I have not yet addressed 
-is whether or not the compute \emph{should} have been performed,
-given the ecological costs (energy and CO2), and the opportunity costs (what could they could have computed instead?).
+\subsection{As of yet this paper has not addressed\ldots{}.}
+\label{sec:org78ead3c}
 
-More generally, in the case of computations with polemic aims,
-how do we decide when to compute?
-How can we weigh costs (of all sorts) against the potential (polemic) benefits?
-This question could be framed from both an ethical perspective, 
-and from an econometric one.
-This section aims to outline potential avenues for future work
-by reviewing various classes of compute projects,
-highlighting ways in which they could be considered polemic,
-and surfacing the field of limits, risks, and rewards associated with each.
-In general, future work should explore the space of risks and rewards
-associated with polemic computes from a variety of ethical, legal, ecological and economic standpoints.
+\subsection{Frameworks for answering this question}
+\label{sec:org3cc9931}
+opportunity
+ecology
+politics of what's being done
+econometric , provides quantification, reifies (or even creates) the reality it strives to model
+in any case, such designations embed particular politics, worldview
 
-\subsection{Volunteer distributed computing projects}
-\label{sec:org9a1ad31}
+\subsection{What is the opposite of a polemic computation?}
+\label{sec:org34251f8}
 
-Some projects have aimed to perform large computations by distributing the work across multiple machines,
-particularly commodity hardware supplied by volunteers.
-A popular platform, BOINC (Berkeley Open Infrastructure for Network Computing)
-allows projects to utilize a vast network of volunteers' computing time, 
-for example, when their laptop is idle, as a screensaver
-\cite{Anderson2004}.
-The power of this approach lies in its ability to scale ``horizontally,''
-across a wide variety of readily-accessible (and widely deployed) machines.
-
-However, individual machines may not be as efficient in power 
-as large-scale facilities.
-Network transmissions, and the generally lower power-efficiency of commodity devices.
-incur additional costs in energy.
-These projects reduce capital overhead for those running the compute,
-but may exacerbate ecological risks.
-
-Future work might examine volunteer computing projects through the lens of polemic computation.
-Projects like SETI (Search for Extraterrestrial Intelligence at Home), which have users perform fast fourier transforms on billions of hours of radio recordings,
-serve as much to engage in discourses around science and the public as they do to produce useful data 
-\cite{Anderson2004}.
-The computational work (and associated costs) might be fruitfully examined to other distributed projects, 
-such as protein folding.
-
-
-\subsection{Web applications as supercomputation}
-\label{sec:org5b8fba9}
-
-Web applications share some properties with the volunteer distributed computing applications mentioned above.
-Much computation is offloaded onto commodity clients, such as mobile phone apps or web browsers.
-Consumers of these applications trade their computational time, and electricity, in exchange for the service.
-Consider Netflix, which retains a centralized system of indexing and content delivery,
-but offloads to consumers the processing associated with watching videos 
-(downloading videos, along with decrypting the digital rights management, decoding the video format, and finally playing the video and audio).
-
-Future work might examine the motivations for architectural decisions in web applications through 
-the polemics around Web 2.0 
-\cite{Scholz2008},
-examining how discourse around ``thin clients'' and ``the cloud''
-interact with technical constraints
-to influence decisions in where processing takes place.
-Such polemic decisions may have real ecological consequences.
-
-
-\subsection{Rise of machine learning}
-\label{sec:orge1ae4b0}
-
-Some work in machine learning blurs the line 
-between polemic intent and answer-finding.
-Image recognition benchmarks provide one example of this phenomenon:
-while a good image recognition algorithm certainly \emph{can} have intrinsic value in other domains 
-(e.g, in transfer learning \cite{Jean2016f}),
-the production of such an algorithm is often incidental to the production of the benchmark.
-Benchmarks serve to mark or legitimize the algorithm's architecture (especially in the case of neural nets)
-for the classification problem.
-
-Meanwhile, contemporary machine learning techniques, especially the training of neural nets, 
-require a tremendous amount of computation, and therefore a large expenditure of energy.
-Thus, when training algorithms in a computationally complex way,
-we must ask questions about the costs (and motivations) for doing so.
-Future work could raise questions about the polemics involved
-with particular attempts to train deep learning algorithms,
-examining their ecological costs against the sociotechnical goals 
-of performance in particular competitions or benchmarks \cite{SixSilberman2015}.
-
-
+\subsection{Generalizing out to other kinds of computes performed}
+\label{sec:org97c409d}
+computes are everywhere, IoT 
+what is their energy 'worth' ?
+with many IoT applications (like ''smart stockrooms'' or even ''smart cities,'')
+this question begs an econometric answer.
+but what about the other stuff we considered above with polemic computes?
+.e.g what 'could' they be doing ? ? ? 
+what sorts of political acitivites are these computes taking part in, and what structures of power are reinforced, reified?
+tho not polemic, same questions raised as above?
 \section{Conclusion}
-\label{sec:org5d2fb34}
+\label{sec:org18d5841}
 
+As computation grows in its ubiquity as a material substrate of contemporary life in the developed world,
+we will only have more things to compute,
+and more things to compute them with.
 Using the example of a particular large-scale compute,
 this paper highlights broader tensions about when and when not to compute.
-In the case of polemic computation, the social rewards are always unclear.
-Future work should consider broadly what we can we do to hedge our risks, 
-not just in time and capital,
-but in ecological cost.
-We will only have more things to compute,
-and more things to compute them with,
-but how to select which to expend our increasingly precious resources on, 
-how to use restraint?
-
+How can we select what we expend our increasingly precious resources on?
+Indeed, how do we decide which computes are considered acceptable, and what goes into such decisions?
+Clarifying our answers to these questions will prove critical in our more resource-constrained future.
 
 \section{Acknowledgements}
-\label{sec:org55cc6e3}
-Thanks to Morgan Aimes, Nick Doty, Anette Greiner, Sebastian Benthall and John Chuang for their comments and conversations.
+\label{sec:orgcb05820}
+Many thanks to Donald Patterson, Ellen Zegura, Morgan Aimes, Nick Doty, Anette Greiner, Sebastian Benthall and John Chuang for their comments and conversations. 
+This work was supported by a grant from the UC Berkeley Center for Long-Term Cybersecurity (CLTC).
+
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{refs}
-
-\section{Reviews}
-\label{sec:org0bd0809}
-I have mixed feelings about this paper because on the one hand I feel like it
-made me think about an interesting issue:  Is there an ethical dimension to the
-use of computation resources to accomplish a "feat"?  Given the amount of
-resources that feats require and the fact that the "only" function as symbolic
-references in technical arguments, should they be resisted so that the resources
-consumed could be put to more just, valuable, critical endeavors?  I think that
-is a valuable contribution.   The paper could use a substantial revision and
-tightening of its argument around this point.
-
-A few ideas that came up that complicated the idea was "proof of work"
-computations.   Bitcoin uses "proof of work" to validate monetary transactions,
-but the product of the work itself is useless only the fact that the work was
-done matters. This seems to fit right in the definition of polemic computing,
-but then doesn't because it is necessary for bitcoin to function.
-
-Secondly, why is the feat not valuable if it "only" promotes a sociotechnical
-discourse.   If that is necessary to push security past SHA1, why is that not as
-important as trying to generate a new synthetic drug.  There is something that
-at first glance seems useless about the SHA1 computation, that upon more
-reflection seems not to hold up. The fact that Google devoted resources to it
-actually makes the argument that it was worthwhile.  It at least seems more
-worthwhile than calculating more digits of PI.
-
-
-I didn't find the examples beyond the SHA1 computation very compelling.  Maybe
-they would be if more space was devoted to them.
-
-
-This paper proposes that some computation is "polemic", meaning that the computation is performed primarily to "enter into sociotechnical discourses" or "forward an argument or ideology" rather than for another set of reasons that I don't find concisely articulated but are exemplified by the author via protein folding and discovering novel drugs. The recent SHA1 collision computation is given as an example. A nascent theory of polemic computation is proposed, and the question of when and when not to compute is brought to the forefront.
-
-I have concerns about many details of the paper, and I suspect these would come up in discussion. If the author could address some of them in a revision, then perhaps the discussion could be more focused on the most interesting ideas.
-
-One concern comes through in my summary: what is the opposite of a polemic computation? A computation "for the best"? For whose best? Don't many (even all) computations enter socio-technical discourses? For example, the search for novel drugs is inextricably tied up in the economics of big pharma, the question of whether all diseases should be treated, the allocation of resources to conditions affecting very few people, perhaps away from treatments that would impact many. The literature on the social construction of technology may be relevant.
-\ldots{}\ldots{}GREAT POINT, DEF FOR DISCUSSION\ldots{}\ldots{}\ldots{}\ldots{}.
-
-To deeply understand what the SHA1 computation was performed, it would seem valuable to interview the people who conducted and approved the use of computation for this purpose. What do they say about why it was performed? 
-\ldots{}..ADD TO DISCUSSION, FUTURE WORK\ldots{}..
-
-You seem to have in mind a hierarchy of better and worse reasons to conduct computation. Do you? If so, what is it? Is it appropriate to have a hierarchy?
-
-The examples in Section 6 seem to focus on energy consumption. What are the other considerations in deciding on where computation takes place (as come through in 6.1 and 6.2)? I did not understand your example in Section 6.3. You may need more explanation of benchmarks, algorithm architectures, neural net training, to allow a general CS audience to appreciate your point.
 \end{document}

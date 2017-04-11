@@ -1,0 +1,129 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /Users/ffff/Projects/limits-17/limits17.org
+
+
+* Ecological Risks, Polemic Rewards
+:PROPERTIES:
+:ARCHIVE_TIME: 2017-04-02 Sun 20:14
+:ARCHIVE_FILE: ~/Projects/limits-17/limits17.org
+:ARCHIVE_CATEGORY: limits17
+:END:
+
+The prior section outlined explanations for why the SHA1 compute was performed, 
+and proposed a theory of polemic computation typifying such explanations.
+A separate question that I have not yet addressed 
+is whether or not the compute /should/ have been performed,
+given the ecological costs (energy and CO2), and the opportunity costs (what could they could have computed instead?).
+
+More generally, in the case of computations with polemic aims,
+how do we decide when to compute?
+How can we weigh costs (of all sorts) against the potential (polemic) benefits?
+This question could be framed from both an ethical perspective, 
+and from an econometric one.
+This section aims to outline potential avenues for future work
+by reviewing various classes of compute projects,
+highlighting ways in which they could be considered polemic,
+and surfacing the field of limits, risks, and rewards associated with each.
+In general, future work should explore the space of risks and rewards
+associated with polemic computes from a variety of ethical, legal, ecological and economic standpoints.
+
+** Volunteer distributed computing projects
+
+Some projects have aimed to perform large computations by distributing the work across multiple machines,
+particularly commodity hardware supplied by volunteers.
+A popular platform, BOINC (Berkeley Open Infrastructure for Network Computing)
+allows projects to utilize a vast network of volunteers' computing time, 
+for example, when their laptop is idle, as a screensaver
+cite:Anderson2004.
+The power of this approach lies in its ability to scale ``horizontally,''
+across a wide variety of readily-accessible (and widely deployed) machines.
+
+However, individual machines may not be as efficient in power 
+as large-scale facilities.
+Network transmissions, and the generally lower power-efficiency of commodity devices.
+incur additional costs in energy.
+These projects reduce capital overhead for those running the compute,
+but may exacerbate ecological risks.
+# so, let's not decentarlize everything...some things it makes ecological sense to centralize
+
+Future work might examine volunteer computing projects through the lens of polemic computation.
+Projects like SETI (Search for Extraterrestrial Intelligence at Home), which have users perform fast fourier transforms on billions of hours of radio recordings,
+serve as much to engage in discourses around science and the public as they do to produce useful data 
+cite:Anderson2004.
+The computational work (and associated costs) might be fruitfully examined to other distributed projects, 
+such as protein folding.
+
+# Cryptocurrencies present another class of distributed computing projects.
+# Proof of work schemes allow peers to perform computationally intensive tasks,
+# which give the currency a scarcity _[]_. 
+# The value of cryptocurrencies are tightly linked to the cost of particular computations,
+# and is thus limited by the capital cost of energy.
+# Since computation has the explicit use of constructing or making legible the value of a currency, 
+# it is difficult to evaluate such work as purely polemic.
+# However, th
+
+
+** Web applications as supercomputation
+
+Web applications share some properties with the volunteer distributed computing applications mentioned above.
+Much computation is offloaded onto commodity clients, such as mobile phone apps or web browsers.
+Consumers of these applications trade their computational time, and electricity, in exchange for the service.
+Consider Netflix, which retains a centralized system of indexing and content delivery,
+but offloads to consumers the processing associated with watching videos 
+(downloading videos, along with decrypting the digital rights management, decoding the video format, and finally playing the video and audio).
+
+Future work might examine the motivations for architectural decisions in web applications through 
+the polemics around Web 2.0 
+cite:Scholz2008,
+examining how discourse around ``thin clients'' and ``the cloud''
+interact with technical constraints
+to influence decisions in where processing takes place.
+Such polemic decisions may have real ecological consequences.
+
+
+** Rise of machine learning
+
+Some work in machine learning blurs the line 
+between polemic intent and answer-finding.
+Image recognition benchmarks provide one example of this phenomenon:
+while a good image recognition algorithm certainly /can/ have intrinsic value in other domains 
+(e.g, in transfer learning cite:Jean2016f),
+the production of such an algorithm is often incidental to the production of the benchmark.
+Benchmarks serve to mark or legitimize the algorithm's architecture (especially in the case of neural nets)
+for the classification problem.
+
+Meanwhile, contemporary machine learning techniques, especially the training of neural nets, 
+require a tremendous amount of computation, and therefore a large expenditure of energy.
+Thus, when training algorithms in a computationally complex way,
+we must ask questions about the costs (and motivations) for doing so.
+Future work could raise questions about the polemics involved
+with particular attempts to train deep learning algorithms,
+examining their ecological costs against the sociotechnical goals 
+of performance in particular competitions or benchmarks cite:SixSilberman2015.
+
+
+* TODO Future Work
+:PROPERTIES:
+:ARCHIVE_TIME: 2017-04-11 Tue 09:31
+:ARCHIVE_FILE: ~/Projects/limits-17/limits17.org
+:ARCHIVE_CATEGORY: limits17
+:ARCHIVE_TODO: TODO
+:END:
+# Bitcoin, proof of work, for the value?
+** Motivate future work with above section
+** Comparison to BTC?
+*** describe how cryptocurrencies e.g. bitcoin work
+
+*** on one hand, compute intrinsic to value
+# Bitcoin uses "proof of work" to validate monetary transactions,
+# but the product of the work itself is useless only the fact that the work was
+# done matters. 
+# This seems to fit right in the definition of polemic computing,
+# but then doesn't because it is necessary for bitcoin to function.
+
+*** on the other, polemic dimension 
+raising q's/making points about currency itself
+trace cipherpunks and its political/technical/social/epistemological commitments
+
