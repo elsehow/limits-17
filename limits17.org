@@ -10,6 +10,8 @@
 #+LATEX_HEADER: \acmYear{2017}
 #+LATEX_HEADER: \copyrightyear{2017}
 #+LATEX_HEADER: \acmPrice{15.00}
+#+LATEX_HEADER: \usepackage[T1]{fontenc}
+#+LATEX_HEADER: \usepackage{lmodern}
 #+TITLE: Better Not to Know? 
 #+Author: 
 #+SUBTITLE: The SHA1 Collision & the Limits of Polemic Computation
@@ -29,11 +31,10 @@ cite:Anderson2004.
 They also invariably enter into sociotechnical discourses,
 taking active agency in the politics, economics and epistemologies 
 of particular fields, disciplines and institutions cite:Ames2015.
-They also incur costs in energy and labor.
-Indeed, computes are material artifacts, instantiated in space and time;
-and share an essential form of agency, and power, with all material things cite:Bennett2013a,Winner2003.
+Indeed, computes are material artifacts, instantiated in space and time (via energy and labor);
+and share an essential form of material agency with all things cite:Bennett2013a,Winner2003.
 
-This paper reads whe SHA1 collision compute (Sections 2 and 3), 
+This paper reads the SHA1 collision compute (Sections 2 and 3), 
 and the various sociotechnical entanglements that motivated its performance (Section 4).
 in order to motivate and explain a theory of /polemic computation/ (Section 5).
 Polemic computations, I claim, enter into sociotechnical discourses through the /feat/ of their completion, rather than by virtue of a particular result computed.
@@ -289,7 +290,7 @@ even though they were already discussed in theory.
 In this way, polemic computation draws strongly from Ames' theory of /charismatic technology/
 cite:Ames2015.
 Drawing on actor-network theory, charismatic technology would ascribe the very artifact of the computation
-(a material artifact produced by material means cite:Dourish2011a,,Bennett2013a)
+(a material artifact produced by material means cite:Dourish2011a,Bennett2013a)
 agency in the technosocial discourses around privacy and security.
 Much like in Ames case of the One Laptop Per Child project,
 polemic computation aims to change behavior and beliefs among specific stakeholders in specific debates.
@@ -324,53 +325,59 @@ acted to /define/ what is and is not a poor security practice for certificate au
 Much in the tradition of critical design
 used its material power cite:Bennett2013a along with a touch of humor, to enter into technosocial debates and imaginaries.
 
-* TODO When is it better not to know?
+* When is it better not to know?
 
-** So far, this paper
-described sha1 computed, situated it in its political goals around cybersecurity.
-we discussed how the fiscal, ecological, and opportunity costs it weighed against these political goals.
-finally, proposed a theory of /polemic computing/ that describes the ``feat''-like nature of this compute, contextualizing this theory past work.
+So far, this paper described the SHA1 compute, situating it relative to particular strategic, political goals in cybersecurity (goals in which Google holds a large economic investment, as a distributor of web browser and Internet services).
+I used this case to motivate a theory of /polemic computing/, which captures the ``feat''-like nature of this compute, as a way of describing the agency that this compute had within the sociotechnical discourse it sought to enter.
 
-** As of yet this paper has not addressed
-the limits within which polemic computes can be considered acceptable.
-some heavy questions remain.... 
-this paper does not ultimately decide whether this particular performance was ``right'' or ``wrong.''
-rather, asks how to define the limits of polemic computes ? 
-How can we decide when significant feats are justified?
-How can we decide when feats should be resisted, because the resources consumed by particular feats could be put to other endeavors? 
-this section discusses how such questions might be answered, raising questions for future work
+The fiscal, ecological, and opportunity costs associated with the SHA-1 compute must have been weighed against these political goals. Future work could attempt to ask those involved first-hand with the work how such costs were considered.
+However, this paper is not primarily concerned with whether or not the performance of the SHA-1 compute was justified. 
+Instead, the major outstanding question for this paper surrounds how we could reasonably consider questions about when polemic computations are (or are not) justified.
 
-** Frameworks for answering this question
-Through what moral, ethical, econometric frameworks could such questions be evaluated? 
-opportunity
-ecology
-politics of what's being done
-econometric , provides quantification, reifies (or even creates) the reality it strives to model
-in any case, such designations embed particular politics, worldview
-if it's a computation ''for the best'' - whose best? why is it good for them?
-future work should look much more thoroughly into this
+Within what limits are polemic computations acceptable?
+When, how, and for whom are those limits justified? 
+When (and how) should ``feats'' be resisted, because the resources they consume could be put to other endeavors? 
+This section discusses how such questions might be answered, raising challenges for future work. 
+I discuss the generalizability of this theory before concluding.
 
-** Counterpoint cases
-consider searching for novel drugs.
-while such an activity in practice would be inexporably tied up in the economics of big pharma, 
-even if it were not, the question of whether all diseases should be treated, 
-the allocation of resources to conditions affecting very few people, perhaps away from treatments that would impact many. 
-The literature on the social construction of technology may be relevant.
+** Frameworks for evaluation
+Above, we raise the question of how we might evaluate whether a polemic computations is acceptable or not.
+Through what frameworks could such questions be evaluated? 
+On one hand, the ecological impact of particular computes weighs heavily as a tangible cost to performing computes.
+One might also discuss opportunity costs with regard to what else could be computed.
+Both of these modes of evaluation beg econometric methods of analysis, 
+operationalizing costs with energy expenditures and computational costs.
 
-bitcoin, in which feat *is what produces value*
-hard to say "we need less," then it wouldnt be currency!!
+However, these costs must be weighed against polemic goals, which do not lend themselves as straightforwardly to such analyses.
+What remains to evaluate the polemic goals of these computes?
+Moral, ethical guidelines that must evaluate the sociotechnical aims being forwarded by particular computes. 
+Future work should more closely examine how such guidelines might be constructed, such that they stand a chance at enabling evaluation against material costs.
+After all, it is not immediately clear what sorts of ethical, regulatory or legal frameworks 
+might serve to create bounding conditions, outside of which certain computes are deemed unacceptable.
+What is clear, however, is that these frameworks (and econometric ones) will inevitably
+embed particular politics and worldviews as they come to create designations of acceptability.
 
-** Finally, generalizing out to other kinds of computes performed
-What is the opposite of a polemic computation?
-does such a thing exist?
-are there any computations for which the ``feat'' of having performed computation do *not* itself work as an actor in technosocial discourses?
-future work could ask this.
-after all, computes are everywhere, IoT - what is their energy 'worth' ?
-with many IoT applications (like ''smart stockrooms'' or even ''smart cities,'') this question begs an econometric answer.
-but what about the polemic sides of these computes; the world in which these computes are not just the producers of answers, but feats?
-.e.g what 'could' they be doing ? ? ? 
-what sorts of political acitivites are these computes taking part in, and what structures of power are reinforced, reified?
-tho not polemic, same questions raised as above?
+Finally, even if such frameworks for evaluating computes existed, it is not immediately clear how they could be used to our benefit. 
+Would legal or regulatory frameworks be most appropriate?
+Or social pressure among technical practitioners?
+Future work could examine these questions more closely.
+
+
+** Generalizing polemic computation
+Finally, this work raises the question of how general this theory of polemic computation must be.
+Do any computes exist that are not, in some way, polemic?
+In other words, are there any computations for which the ``feat'' of having performed computation do *not* itself work as an actor in technosocial discourses?
+After all, computes are everywhere, and increasingly so in an era of connected devices in the home, workplace, and on the body. 
+What is the energy, labor, time of the computes these devices perform ``worth,'' relative to other things that could be done?
+With many IoT applications (like ''smart stockrooms'' or even ''smart cities,'') this question begs an econometric answer.
+But, what about the polemic sides of these computes: the sense in which these computes are not just the producers of answers, but feats, which serve to reinforce, reify, or introduce particular politics, systems of commerce, oppress liberation?
+
+Future work could probe this question more deeply.
+Fruitful cases for further study might include the search for novel drugs (which is inexorably tied in the particular economics of the pharmaceutical industry), or cryptocurrencies such as Bitcoin (which use difficult computations to produce notions of economic value).
+By examining these different cases, we might refine our tools for evaluating polemic dimensions to computes more generally.
+In so doing, we may begin to make headway on the difficult questions raised in this section, around how computes can be considered acceptable with regard to particular goals.
+
+
 * Conclusion
 
 As computation grows in its ubiquity as a material substrate of contemporary life in the developed world,
@@ -389,4 +396,5 @@ This work was supported by a grant from the UC Berkeley Center for Long-Term Cyb
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{refs}
+
 

@@ -127,3 +127,19 @@ of performance in particular competitions or benchmarks cite:SixSilberman2015.
 raising q's/making points about currency itself
 trace cipherpunks and its political/technical/social/epistemological commitments
 
+
+* Bitcoin
+:PROPERTIES:
+:ARCHIVE_TIME: 2017-04-12 Wed 09:16
+:ARCHIVE_FILE: ~/Projects/limits-17/limits17.org
+:ARCHIVE_OLPATH: When is it better not to know?
+:ARCHIVE_CATEGORY: limits17
+:END:
+Consider the cryptocurrency Bitcoin as a counterpoint to our discussion up until now.
+Bitcoin is ``mined'' using  a /proof-of-work/ computation, a problem for which generating an answer is expensive, but checking a given answer for correctness is inexpensive.
+In one sense, this proof-of-work computation is a feat; in another, the particular answer computed is of intrinsic relevance to the application context.
+Indeed, the feat is itself an answer that produces value.
+# so its blurry....but more than that thouhg.....enforces particular politics and systems of commerce!!!!
+# besides
+hard to say "we need less," then it wouldnt be currency!!
+
