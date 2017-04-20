@@ -377,7 +377,6 @@ Fruitful cases for further study might include the search for novel drugs (which
 By examining these different cases, we might refine our tools for evaluating polemic dimensions to computes more generally.
 In so doing, we may begin to make headway on the difficult questions raised in this section, around how computes can be considered acceptable with regard to particular goals.
 
-
 * Conclusion
 
 As computation grows in its ubiquity as a material substrate of contemporary life in the developed world,
