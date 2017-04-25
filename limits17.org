@@ -3,13 +3,11 @@
 #+LaTeX_CLASS: acmart
 #+LATEX_HEADER: \usepackage{epigraph}
 #+LATEX_HEADER: \input{authors}
-#+LATEX_HEADER: \setcopyright{rightsretained}
-#+LATEX_HEADER: \acmDOI{10.475/123_4}
-#+LATEX_HEADER: \acmISBN{123-4567-24-567/08/06}
-#+LATEX_HEADER: \acmConference[LIMITS '17]{ACM Limits Workshop}{June 2017}{Santa Barbara, California USA} 
-#+LATEX_HEADER: \acmYear{2017}
-#+LATEX_HEADER: \copyrightyear{2017}
-#+LATEX_HEADER: \acmPrice{15.00}
+#+LATEX_HEADER: \copyrightyear{2017} 
+#+LATEX_HEADER: \acmYear{2017} 
+#+LATEX_HEADER: \setcopyright{acmlicensed}
+#+LATEX_HEADER: \acmConference{LIMITS '17}{June 22-24, 2017}{Santa Barbara, CA, USA}\acmPrice{15.00}\acmDOI{http://dx.doi.org/10.1145/3080556.3084082}
+#+LATEX_HEADER: \acmISBN{978-1-4503-4950-5/17/06}
 #+LATEX_HEADER: \usepackage[T1]{fontenc}
 #+LATEX_HEADER: \usepackage{lmodern}
 #+TITLE: Better Not to Know? 
@@ -31,14 +29,14 @@ cite:Anderson2004.
 They also invariably enter into sociotechnical discourses,
 taking active agency in the politics, economics and epistemologies 
 of particular fields, disciplines and institutions cite:Ames2015.
-Indeed, computes are material artifacts, instantiated in space and time (via energy and labor);
+Indeed, computes are material artifacts, manifest in space and time,
 and share an essential form of material agency with all things cite:Bennett2013a,Winner2003.
 
 This paper reads the SHA1 collision compute (Sections 2 and 3), 
 and the various sociotechnical entanglements that motivated its performance (Section 4).
 in order to motivate and explain a theory of /polemic computation/ (Section 5).
 Polemic computations, I claim, enter into sociotechnical discourses through the /feat/ of their completion, rather than by virtue of a particular result computed.
-In the case of the SHA1 collision, the feat of the compute entered into existing discourses of authenticity, privacy and security on the Internet (Section 4).
+In the case of the SHA1 collision, the compute as a feat compute entered into existing discourses of authenticity, privacy and security on the Internet (Section 4).
 
 # In the case of the SHA1 compute, researchers took on a sizeable monetary, environmental and labor costs
 # to enforce a point of view among specific stakeholders in the (social, political) economy of SSL certificates.
@@ -50,8 +48,8 @@ Rather, it aims to raise discussion around the limits within which polemic compu
 When are feats are justified? 
 When should feats be resisted, due to their costs? 
 Through what moral, ethical, econometric frameworks could such questions even be evaluated? 
-In these questions lurk the shadows of larger debates around how, and why computations are deemed acceptable (and for whom):
-how do designations of acceptability relate to the costs fo computes, and to the social structures that are strengthened, weakened, or reified by their performance?
+In these questions lurk the shadows of larger debates around how, and why computations are deemed acceptable (and for whom).
+How do designations of acceptability relate to the costs fo computes, and to the social structures that are strengthened, weakened, or reified by their performance?
 
 * Background
 
@@ -63,15 +61,15 @@ they take some data, and produce some new data, such that the original data cann
 
 # https://www.schneier.com/blog/archives/2005/02/cryptanalysis_o.html
 SHA1 is one cryptographic hash function, designed by the NSA in the early 1990s.
-For some block of any-sized data, SHA1 produces a 40-digit string of characters.
-It is used in most version control applications to refer uniquely to files. SHA1 may also be used to check for corrupted files. 
+The hashes output by SHA1 are typically 40 digits, regardless of the size of the input data.
+It is used in many version control applications to refer uniquely to files, 
+or to check for corrupted files. 
 Crucially, as I will discuss in Section 3, SHA1 is also used in security-oriented protocols such as SSH/TLS.
 
 
 ** SHA1 collisions
 
-The hashes output by SHA1 are typically 40 digits, regardless of the size of the input data.
-Crucially, hashes /should/ relate uniquely to input data: 
+Hashes should relate uniquely to input data: 
 two different inputs should never produce the same hash (even though hashes are much smaller than the original data).
 A /collision/ refers to the breakdown of this property,
 in which two different input data produce identical hashes.
@@ -79,9 +77,9 @@ in which two different input data produce identical hashes.
 Collisions break several common uses of SHA1. 
 Amusingly, a test in the WebKit browser engine's source code
 broke the version control system used for that repository cite:Koivisto2017.
-Subversion, which WebKit's repository relies on, uses SHA-1 hashes to refer uniquely to source code files.
+Subversion, on which WebKit's repository relies, uses SHA-1 hashes to refer uniquely to source code files.
 A test aimed at capturing the SHA-1 collision incidentally included two different files with the same hash, 
-causing a break in the repository software, which temporarily halted development.
+breaking the version control software and temporarily halting development.
 (Git sidesteps this issue by using an additional code  attached to the SHA-1 hash cite:Torvalds2017).
 
 In the case of SSL/TLS, the protocol for encrypted and authenticated communication on the web, SHA1 collisions could have even more severe consequences;
@@ -98,35 +96,36 @@ cite:Schneier2005.
 In general, the security of this brute-force attack is judged relative to the outer edge of high-end hardware, and hash functions are expected to be retired in time, as computers grow more powerful.
 However, this 2^80 space of possibilities in the search for a collision is not considered feasible, so SHA1 appears safe.
 
-In 2005, however, Wang, Yin & Yu found an algorithm to produce SHA1 collisions in under 2^69 calculations (about 2,0000 times faster than the brute force approach)
+In 2005, however, Wang, Yin & Yu found an algorithm to produce SHA1 collisions in under 2^69 calculations (about 2,0000 times faster than brute force)
 cite:Wang2005.
-(It is worth noting that other work had suggested possible weaknesses of SHA1 earlier cite:Biham2005).
-While such a compute was, at the time, outside the limits of even powerful adversaries,
+(Other work had suggested possible weaknesses of SHA1 earlier cite:Biham2005).
+While such a compute was, at the time, considered outside the limits of even powerful adversaries,
 the result caused concern among cryptographers cite:Schneier2005.
-By 2011, a 2^61 calculation attack was discovered cite:Stevens2013a,
+By 2011, a 2^61-calculation attack was discovered cite:Stevens2013a,
 and by the mid 2010s, the developers of most major browsers had announced plans to stop accepting SHA1 SSL certificates 
 cite:Mozilla2017,Sleevi2014.
 
 * Performing a Collision
 
-The study in question here produced two PDFs with different content, but identical SHA1 hashes
+The study in question here produced two PDFs with different content, but identical SHA1 hashes.
 cite:Stevens2017.
-the study in question performed a SHA collision in 2^63.1 computations, 
-and released the source code for replicating the attack
+The authors released the source code for performing the attack
 cite:Stevens2017github.
 
+This feat required 2^63.1 computations. 
 Compared to the 2^61 theoretical attack, the practical attack took a bit longer due to the communication overhead required to coordinate computations across several datacenters, and due to the relative inefficiency of using GPUs rather than CPUs.
-In practice, the computation required to produce the SHA1 collision required 6,500 years of CPU time and 110 years of GPU time. While this number certainly sounds high, 600,000 cores, each running two threads, could take only two days of compute time.
+
+In practice, the computation that produced the SHA1 collision required 6,500 years of CPU time and 110 years of GPU time. While this number certainly sounds high, with 600,000 cores, each running two threads, it could require only a few days of compute time.
 
 Of course, time is not the only cost to consider.
 Computation is material, physically instantiated, and has ecological consequences.
-Beyond monetary cost, such large computations have very real costs in energy.
+Beyond monetary cost, such large computations carry very real costs in energy.
 Since the implementation details of the infrastructures used for the large collision compute are not entirely knowable from the paper,
-it is difficult to estimate this energy cost.
-As a rough point of comparison, the monetary cost of such a compute on Cray supercomputers would be on the order of one million USD 
+it is difficult to estimate this energy cost, but, as a rough point of comparson,
+the monetary cost of such a compute on Cray supercomputers would be on the order of one million USD 
 (though such estimates might vary widely in either direction from system to system)
 cite:Pautsch2016.
-In any case, such a figure is a tiny sliver of Alphabet Inc.'s 90 billion USD revenue in 2016.
+In any case, such a figure is a tiny sliver of Alphabet Inc.'s 90 billion USD revenue as of 2016.
 
 This section gave background on SHA1 collisions, 
 and gave context for the costs (in time and energy) of the SHA1 collision compute.
@@ -328,7 +327,7 @@ used its material power cite:Bennett2013a along with a touch of humor, to enter 
 * When is it better not to know?
 
 So far, this paper described the SHA1 compute, situating it relative to particular strategic, political goals in cybersecurity (goals in which Google holds a large economic investment, as a distributor of web browser and Internet services).
-I used this case to motivate a theory of /polemic computing/, which captures the ``feat''-like nature of this compute, as a way of describing the agency that this compute had within the sociotechnical discourse it sought to enter.
+I used this case to motivate a theory of /polemic computation/, which captures the ``feat''-like nature of this compute, as a way of describing the agency that this compute had within the sociotechnical discourse it sought to enter.
 
 The fiscal, ecological, and opportunity costs associated with the SHA-1 compute must have been weighed against these political goals. Future work could attempt to ask those involved first-hand with the work how such costs were considered.
 However, this paper is not primarily concerned with whether or not the performance of the SHA-1 compute was justified. 
@@ -346,21 +345,22 @@ Through what frameworks could such questions be evaluated?
 On one hand, the ecological impact of particular computes weighs heavily as a tangible cost to performing computes.
 One might also discuss opportunity costs with regard to what else could be computed.
 Both of these modes of evaluation beg econometric methods of analysis, 
-operationalizing costs with energy expenditures and computational costs.
+operationalizing costs as expenditures in energy, resources, labor, capital.
 
-However, these costs must be weighed against polemic goals, which do not lend themselves as straightforwardly to such analyses.
-What remains to evaluate the polemic goals of these computes?
-Moral, ethical guidelines that must evaluate the sociotechnical aims being forwarded by particular computes. 
+However, these economic costs must be weighed against polemic goals, which do not lend themselves as straightforwardly to the same analyses.
+How can we evaluate the ``worth'' of the polemic goals of these computes?
+Moral and ethical frameworks could evaluate the sociotechnical aims forwarded by particular computes. 
 Future work should more closely examine how such guidelines might be constructed, such that they stand a chance at enabling evaluation against material costs.
 After all, it is not immediately clear what sorts of ethical, regulatory or legal frameworks 
 might serve to create bounding conditions, outside of which certain computes are deemed unacceptable.
 What is clear, however, is that these frameworks (and econometric ones) will inevitably
-embed particular politics and worldviews as they come to create designations of acceptability.
+embed particular politics and worldviews as they come construct designations of acceptability.
 
 Finally, even if such frameworks for evaluating computes existed, it is not immediately clear how they could be used to our benefit. 
 Would legal or regulatory frameworks be most appropriate?
 Or social pressure among technical practitioners?
-Future work could examine these questions more closely.
+Future work could examine these questions more closely,
+and in the context of different types of computes, or different moral and ethical frameworks.
 
 
 ** Generalizing polemic computation
