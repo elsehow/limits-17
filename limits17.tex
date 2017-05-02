@@ -1,4 +1,4 @@
-% Created 2017-04-24 Mon 20:31
+% Created 2017-05-02 Tue 08:19
 % Intended LaTeX compiler: pdflatex
 \documentclass[sigconf]{acmart}
 \usepackage[utf8]{inputenc}
@@ -41,7 +41,7 @@
 
 
 \section{Introduction}
-\label{sec:org75eddc9}
+\label{sec:org6098e89}
 
 From protein folding to the discovery of novel drugs,
 large computes can discover valuable answers to important questions
@@ -68,7 +68,7 @@ In these questions lurk the shadows of larger debates around how, and why comput
 How do designations of acceptability relate to the costs fo computes, and to the social structures that are strengthened, weakened, or reified by their performance?
 
 \section{Background}
-\label{sec:org79d5f75}
+\label{sec:org8250138}
 
 
 Before discussing Google's large compute in depth,
@@ -84,7 +84,7 @@ Crucially, as I will discuss in Section 3, SHA1 is also used in security-oriente
 
 
 \subsection{SHA1 collisions}
-\label{sec:org67ccb05}
+\label{sec:org4e33e29}
 
 Hashes should relate uniquely to input data: 
 two different inputs should never produce the same hash (even though hashes are much smaller than the original data).
@@ -104,7 +104,7 @@ namely, breaks to authenticity and/or security in web connections.
 Section 5 will return to TLS vulnerability in more detail.
 
 \subsection{SHA1 collisions in theory}
-\label{sec:org2c6f7c5}
+\label{sec:org326d25b}
 
 In discussing the safey of particular hash functions, two questions must be asked:
 (1) how long would it take to find a collision by brute force?, and 
@@ -124,7 +124,7 @@ and by the mid 2010s, the developers of most major browsers had announced plans 
 \cite{Mozilla2017,Sleevi2014}.
 
 \section{Performing a Collision}
-\label{sec:org307f820}
+\label{sec:org8d7e57d}
 
 The study in question here produced two PDFs with different content, but identical SHA1 hashes.
 \cite{Stevens2017}.
@@ -152,7 +152,7 @@ The following section details possible explanations for why the computation was 
 in practice, rather than simply discussed in theory.
 
 \section{Explaining why the compute happened}
-\label{sec:org8536c9d}
+\label{sec:org0b2b39c}
 
 \begin{figure*}
 \centering
@@ -178,7 +178,7 @@ and aimed to change opinions and behavior among specific groups of stakeholders.
 This section focuses in particular on those involved in the ecosystem of SSL certificates: browsers, webmasters, and the certificate authorities (CAs) tasked with generating certificates.
 
 \subsection{Practice versus theory}
-\label{sec:orga900aec}
+\label{sec:org51e2d14}
 
 Before progressing onto a discussion of this compute on the ecosystem of SSL certificates,
 we must briefly argue for why an argument of academic interest does not sufficiently explain why this compute was performed, rather than simply discussed.
@@ -203,7 +203,7 @@ an application in which stakes are potentially much higher:
 the issuance of SSL certificates, some of which rely on SHA1 to provide cryptographic guarantees.
 
 \subsection{SHA1 and SSL Certificates}
-\label{sec:org249a350}
+\label{sec:org4617d5f}
 
 \begin{figure}[t!]
 \centering
@@ -228,7 +228,7 @@ as well as stakeholders for whom a change away from SHA1 could incur significant
 The following sections examine the polemic impact of this attack on both CAs, and browser developers. 
 
 \subsubsection{Certificate authorities}
-\label{sec:org205f4ac}
+\label{sec:org9cdd17f}
 
 First, the SHA1 attack can be mediated entirely by
 replacing old SHA1 certificates with newer ones using SHA-2 or SHA-3.
@@ -245,7 +245,7 @@ Thus, this rather costly collision compute worked to an extent as an agent of en
 
 
 \subsubsection{Browser developers}
-\label{sec:orgae7ef28}
+\label{sec:org9fb49ff}
 
 Alongside the issue of enforcing proper security practices on a decentralized system of certificate authorities, 
 a separate ecosystem of browser developers exercises independent authority to accept, or reject, certificates issued by CAs.
@@ -269,7 +269,7 @@ Crucially, browsers has a vested interest in security:
 browsers need their users to feel secure, as customers will flee if they do not feel safe shopping and communicating on the Internet.
 
 \section{The polemics of actually doing}
-\label{sec:orgb1d5a42}
+\label{sec:orga085116}
 
 The prior section gave sociotechnical context for the performance of the SHA1 collision compute,
 giving many explanations across a wide variety of contexts.
@@ -283,7 +283,7 @@ in centering the material nature of performed computation
 in describing its agential power in sociotechnical discourses.
 
 \subsection{Defining polemic computation}
-\label{sec:org781cf9a}
+\label{sec:orgbac6343}
 
 This paper defines \emph{polemic computation} 
 as a computation enacted (rather than discussed)
@@ -300,7 +300,7 @@ to other theories of charismatic technology and critical design,
 highlighting the relevant differences to our theories.
 
 \subsection{Charismatic technology}
-\label{sec:org1805277}
+\label{sec:org955f983}
 
 Polemic computation can be said to ``work'' in part 
 because it is animated by ideological frameworks.
@@ -334,7 +334,7 @@ Thus, this collision demonstrated not only the considerable resources required t
 but the vast resources that Google must have, if it is able to spend so heavily on a project with essentially polemic aims.
 
 \subsection{Critical design}
-\label{sec:org81f7ca4}
+\label{sec:org2f87ee3}
 
 Another strand of research that explicitly centers the agency of technological artifacts
 is critical design \cite{Dunne2001}.
@@ -350,7 +350,7 @@ Much in the tradition of critical design
 used its material power \cite{Bennett2013a} along with a touch of humor, to enter into technosocial debates and imaginaries.
 
 \section{When is it better not to know?}
-\label{sec:orgffe5e6d}
+\label{sec:org65f24d4}
 
 So far, this paper described the SHA1 compute, situating it relative to particular strategic, political goals in cybersecurity (goals in which Google holds a large economic investment, as a distributor of web browser and Internet services).
 I used this case to motivate a theory of \emph{polemic computation}, which captures the ``feat''-like nature of this compute, as a way of describing the agency that this compute had within the sociotechnical discourse it sought to enter.
@@ -366,7 +366,7 @@ This section discusses how such questions might be answered, raising challenges 
 I discuss the generalizability of this theory before concluding.
 
 \subsection{Frameworks for evaluation}
-\label{sec:org5e2877f}
+\label{sec:org1edfc31}
 Above, we raise the question of how we might evaluate whether a polemic computations is acceptable or not.
 Through what frameworks could such questions be evaluated? 
 On one hand, the ecological impact of particular computes weighs heavily as a tangible cost to performing computes.
@@ -391,7 +391,7 @@ and in the context of different types of computes, or different moral and ethica
 
 
 \subsection{Generalizing polemic computation}
-\label{sec:org97fdca4}
+\label{sec:orgc0f2007}
 Finally, this work raises the question of how general this theory of polemic computation must be.
 Do any computes exist that are not, in some way, polemic?
 In other words, are there any computations for which the ``feat'' of having performed computation do \textbf{not} itself work as an actor in technosocial discourses?
@@ -406,7 +406,7 @@ By examining these different cases, we might refine our tools for evaluating pol
 In so doing, we may begin to make headway on the difficult questions raised in this section, around how computes can be considered acceptable with regard to particular goals.
 
 \section{Conclusion}
-\label{sec:org0bfe483}
+\label{sec:org4541188}
 
 As computation grows in its ubiquity as a material substrate of contemporary life in the developed world,
 we will only have more things to compute,
@@ -418,7 +418,7 @@ Indeed, how do we decide which computes are considered acceptable, and what goes
 Clarifying our answers to these questions will prove critical in our more resource-constrained future.
 
 \section{Acknowledgements}
-\label{sec:org7088584}
+\label{sec:org07cfec6}
 Many thanks to Donald Patterson, Ellen Zegura, Morgan Aimes, Nick Doty, Anette Greiner, Sebastian Benthall and John Chuang for their comments and conversations. 
 This work was supported by a grant from the UC Berkeley Center for Long-Term Cybersecurity (CLTC).
 
