@@ -23,33 +23,38 @@
 
 * Introduction
 
-From protein folding to the discovery of novel drugs,
-large computes can discover valuable answers to important questions
-cite:Anderson2004.
-They also invariably enter into sociotechnical discourses,
-taking active agency in the politics, economics and epistemologies 
-of particular fields, disciplines and institutions cite:Ames2015.
-Indeed, computes are material artifacts, manifest in space and time,
-and share an essential form of material agency with all things cite:Bennett2013a,Winner2003.
+From protein folding to the discovery of novel drugs, large computes can
+discover valuable answers to important questions cite:Anderson2004. They also
+invariably enter into sociotechnical discourses, taking active agency in the
+politics, economics and epistemologies of particular fields, disciplines and
+institutions cite:Ames2015. Indeed, computes are material artifacts, manifest in
+space and time, and share an essential form of material agency with all things
+cite:Bennett2013a,Winner2003.
 
-This paper reads the SHA1 collision compute (Sections 2 and 3), 
-and the various sociotechnical entanglements that motivated its performance (Section 4).
-in order to motivate and explain a theory of /polemic computation/ (Section 5).
-Polemic computations, I claim, enter into sociotechnical discourses through the /feat/ of their completion, rather than by virtue of a particular result computed.
-In the case of the SHA1 collision, the compute as a feat compute entered into existing discourses of authenticity, privacy and security on the Internet (Section 4).
+This paper reads the SHA1 collision compute (Sections 2 and 3), and the various
+sociotechnical entanglements that motivated its performance (Section 4), in
+order to motivate and explain a theory of /polemic computation/ (Section 5).
+Polemic computations, I claim, enter into sociotechnical discourses through the
+/feat/ of their completion, rather than by virtue of a particular result
+computed. In the case of the SHA1 collision, the compute as a feat entered into
+existing discourses of authenticity, privacy and security on the Internet
+(Section 4).
 
 # In the case of the SHA1 compute, researchers took on a sizeable monetary, environmental and labor costs
 # to enforce a point of view among specific stakeholders in the (social, political) economy of SSL certificates.
 # because the resources consumed by particular feats could be put to other endeavors? 
 
-The performance of the SHA1 collison weighed political goals around cybersecurity against fiscal, ecological, and opportunity costs.
-This paper does not opine on whether its performance was ``right'' or ``wrong,'' acceptable or not, justified or unjustified.
-Rather, it aims to raise discussion around the limits within which polemic computes can be considered acceptable (Section 6).
-When are feats are justified? 
-When should feats be resisted, due to their costs? 
-Through what moral, ethical, econometric frameworks could such questions even be evaluated? 
-In these questions lurk the shadows of larger debates around how, and why computations are deemed acceptable (and for whom).
-How do designations of acceptability relate to the costs fo computes, and to the social structures that are strengthened, weakened, or reified by their performance?
+The performance of the SHA1 collison weighed political goals around
+cybersecurity against fiscal, ecological, and opportunity costs. This paper does
+not opine on whether its performance was acceptable or not, justified or
+unjustified. Rather, it aims to raise discussion around the limits within which
+polemic computes can be considered acceptable (Section 6). When are feats
+justified? When should feats be resisted, due to their costs? Through what
+moral, ethical, econometric frameworks could such questions even be evaluated?
+In these questions lurk the shadows of larger debates around how, and why
+computations are deemed acceptable (and for whom). How do designations of
+acceptability relate to the costs of computes, and to the social structures that
+are strengthened, weakened, or reified by their performance?
 
 * Background
 
